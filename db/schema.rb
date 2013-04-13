@@ -68,6 +68,8 @@ ActiveRecord::Schema.define(:version => 20130413190850) do
     t.integer  "animal_type_id"
     t.integer  "need_level_id"
     t.integer  "photo_id"
+    t.integer  "avatar_width"
+    t.integer  "avatar_height"
     t.datetime "created_at",     :null => false
     t.datetime "updated_at",     :null => false
   end

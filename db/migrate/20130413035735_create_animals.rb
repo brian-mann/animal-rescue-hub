@@ -16,6 +16,8 @@ class CreateAnimals < ActiveRecord::Migration
       t.integer :animal_type_id
       t.integer :need_level_id
 			t.integer :photo_id
+			t.integer :avatar_width
+			t.integer :avatar_height
 
       t.timestamps
     end
