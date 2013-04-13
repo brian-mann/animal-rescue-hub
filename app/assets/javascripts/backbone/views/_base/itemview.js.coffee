@@ -1,3 +1,3 @@
-@PlanetExpress.module "Views", (Views, App, Backbone, Marionette, $, _) ->
+@Hub.module "Views", (Views, App, Backbone, Marionette, $, _) ->
 	
 	class Views.ItemView extends Marionette.ItemView

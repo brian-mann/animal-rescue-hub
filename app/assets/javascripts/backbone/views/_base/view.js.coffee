@@ -1,4 +1,4 @@
-@PlanetExpress.module "Views", (Views, App, Backbone, Marionette, $, _) ->
+@Hub.module "Views", (Views, App, Backbone, Marionette, $, _) ->
 	
 	_remove = Marionette.View::remove
 	

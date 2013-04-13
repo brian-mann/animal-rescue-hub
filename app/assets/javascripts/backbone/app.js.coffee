@@ -1,4 +1,4 @@
-@AnimalRescueHub = do (Backbone, Marionette) ->
+@Hub = do (Backbone, Marionette) ->
 	
 	App = new Marionette.Application	
 		
