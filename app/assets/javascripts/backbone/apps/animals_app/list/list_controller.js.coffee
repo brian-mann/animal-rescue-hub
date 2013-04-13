@@ -5,7 +5,11 @@
 		list: ->
 			animals = App.request "animal:entities"
 			
-			listView = @getListView animals
+			App.execute "when:fetched", animals, =>
+
+				listView = @getListView animals
+			
+				App.mainRegion.show listView
 		
 		getListView: (animals) ->
 			new List.Animals
