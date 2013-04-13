@@ -40,10 +40,23 @@
 			_.pluck views, "el"
 		
 		onShow: ->
-			@$el.isotope
-				animationEngine: "css"
-				# itemSelect: @$el.children()
-				# layoutMode: "fitRows"
+			children = @$el.children()
+			children.hide()
+			@$el.imagesLoaded =>
+				# @$el.show()
+				# @$el.isotope
+				# 	animationEngine: "css"
+					# itemSelect: @$el.children()
+					# layoutMode: "fitRows"
+				# @$el.show()
+				@$el.isotope()
+				children.show()
+				# @$el.isotope( 'remove', children );
+				@$el.isotope( 'insert', children );
+				# @$el.isotope "addItems", @$el.children()
+				
+				# @$el.show()
+				# @$el.isotope "addItems", @$el.children()
 		
 		onClose: ->
 			@$el.isotope('destroy')
