@@ -4,3 +4,15 @@ $icons-sprite-dimensions: true;
 $icons-clean-up: true;
 @import "icons/*.png";
 @include all-icons-sprites;
+
+@mixin responsive-width($width: 100%, $padding: 0, $border: 0, $borderColor: #D7DADF)	{
+	width: $width;
+	@include box-sizing(border-box);	
+	@if $padding != "none" {
+		padding: $padding;
+	}
+	border-width: $border; // these border styles needed to be split out, so you could pass border: 0 1px 5px 2px instead of just one single border argument
+	border-color: $borderColor;
+	border-style: solid;	
+	float: left;
+}

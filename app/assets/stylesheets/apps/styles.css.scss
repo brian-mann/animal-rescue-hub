@@ -33,8 +33,12 @@ li 								{  list-style: none; }
 	&.other-bg:after 			{  background: $pastel-green image-url("bg-images/other-white.png") no-repeat 50% 30%;  }
 }
 .dropdown-link 					{  }
-.animal-profile-wrapper			{  @include border-radius; padding: 20px 0px;}
-.animal-profile 				{  background-color: #fff; margin: 20px; padding: 20px; border: 1px solid #eee; 
-	.animal-profile-content 	{  width: 75%; float: left; position: relative;  }
-	.animal-profile-sidebar 	{  width: 25%; float: left; background-color: #f6f6f6;  }
+.animal-profile-wrapper			{  @include border-radius; padding: 20px 0;}
+.animal-profile 				{  background-color: #fff; margin: 20px; border: 1px solid #eee; overflow: auto;  
+	.animal-icon 				{  top: 20px; left: 20px; }
+	.animal-profile-content 	{  background-color: #fff; @include responsive-width(75%); padding: 20px; border-right: 1px solid #eee; float: left; position: relative;  }
+	.animal-profile-sidebar 	{  @include responsive-width(25%); padding: 20px; border-left: 1px solid #fff; float: left; background-color: #f6f6f6;  }
 }
+.animal-profile-title 			{  padding-left: 60px; }
+.animal-profile-name 			{  font-family: 'Merienda', cursive; font-size: 24px; font-weight: bold; margin-top: 10px; }
+.animal-profile-location 		{  color: #838080; font-size: 14px; }
