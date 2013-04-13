@@ -1,14 +1,18 @@
-@Hub.module "AnimalsApp", (AnimalsApp, App, Backbone, Marionette, $, _) ->
+@Hub.module "Entities", (Entities, App, Backbone, Marionette, $, _) ->
 	
-	class AnimalsApp.Router extends Marionette.AppRouter
-		routes:
-			"animals" : "list"
+	class Entities.Animal extends Entities.Model
+	
+	class Entities.AnimalsCollection extends Entities.Collection
+		model: Entities.Animal
 		
+		url: -> Routes.animals_path()
+	
 	API =
-		list: ->
-			AnimalsApp.List.Controller.list()
+		getAnimals: ->
+			animals = new Entities.AnimalsCollection
+			animals.fetch
+				reset: true
+			animals
 	
-	
-	App.addInitializer ->
-		new AnimalsApp.Router
-			controller: API
+	App.reqres.setHandler "animal:entities", ->
+		API.getAnimals()
