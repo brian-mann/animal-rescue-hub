@@ -11,10 +11,12 @@
 // GO AFTER THE REQUIRES BELOW.
 //
 //= require jquery
+//= require js-routes
+
 //= require lib/underscore
 //= require lib/backbone
 //= require lib/marionette
-//= require js-routes
+//= require_tree ./vendor
 
 //= require_tree ./backbone/config
 //= require backbone/app
