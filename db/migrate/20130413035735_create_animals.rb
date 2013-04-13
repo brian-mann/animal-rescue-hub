@@ -9,8 +9,9 @@ class CreateAnimals < ActiveRecord::Migration
       t.text :story
       t.integer :nonprofit_id
       t.integer :donation_id
-      t.integer :type_id
+      t.integer :animal_type_id
       t.integer :need_level_id
+			t.integer :photo_id
 
       t.timestamps
     end

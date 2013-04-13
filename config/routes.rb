@@ -3,6 +3,8 @@ AnimalRescueHub::Application.routes.draw do
 
   devise_for :admin_users, ActiveAdmin::Devise.config
 
+	resources :animals, :only => [:index]
+
   root :to => 'application#index'
 
   # The priority is based upon order of creation:
