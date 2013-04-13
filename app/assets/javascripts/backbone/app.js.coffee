@@ -5,6 +5,9 @@
 	App.on "initialize:before", (options) ->
 		@animalTypes = App.request "animal:type:entities", options.animalTypes
 	
+	App.reqres.setHandler "app:animal:types", ->
+		App.animalTypes
+	
 	App.rootRoute = Routes.animals_path()	
 	
 	App.addRegions

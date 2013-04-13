@@ -13,7 +13,6 @@
 			AnimalsApp.Show.Controller.show id, animal
 	
 	App.vent.on "animal:clicked", (animal) ->
-		console.log animal
 		App.navigate Routes.animal_path(animal.id)
 		API.show animal.id, animal
 	

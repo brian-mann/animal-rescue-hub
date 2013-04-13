@@ -4,17 +4,36 @@
 		
 		list: ->
 			animals = App.request "animal:entities"
+			types		= App.request "app:animal:types"
 			
-			App.execute "when:fetched", animals, =>
+			App.execute "when:fetched", [animals, types], =>
 
-				listView = @getListView animals
+				@layout = @getLayoutView()
+				
+				@layout.on "show", =>
+					@animalTypesRegion types
+					@animalsListRegion animals
 			
-				listView.on "childview:animal:clicked", (iv, args) ->
+				@layout.on "childview:animal:clicked", (iv, args) ->
 					App.vent.trigger "animal:clicked", args.model		
 			
-				App.mainRegion.show listView
+				App.mainRegion.show @layout
+		
+		animalsListRegion: (animals) ->
+			listView = @getListView animals
+			@layout.animalsListRegion.show listView
+		
+		animalTypesRegion: (types) ->
+			typesView = @getTypesView types
+			@layout.animalTypesRegion.show typesView
+		
+		getTypesView: (types) ->
+			new List.AnimalTypes
+				collection: types
 		
 		getListView: (animals) ->
 			new List.Animals
 				collection: animals
-			
+		
+		getLayoutView: ->
+			new List.Layout
