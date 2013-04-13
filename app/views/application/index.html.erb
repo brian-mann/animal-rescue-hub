@@ -3,6 +3,8 @@
 
 <%= javascript_tag do %>
 	$(function() {
-		Hub.start();
+		Hub.start({
+			animalTypes: gon.animal_types
+		});
 	});
 <% end %>

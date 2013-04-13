@@ -20,7 +20,8 @@
 		# 	
 		
 		onShow: ->
-			@ui.animalsList.isotope()
+			@ui.animalsList.isotope
+				animationEngine: "css"
 				# itemSelect: @$el.children()
 				# layoutMode: "fitRows"
 		

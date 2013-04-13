@@ -2,6 +2,9 @@
 	
 	App = new Marionette.Application
 	
+	App.on "initialize:before", (options) ->
+		@animalTypes = App.request "animal:type:entities", options.animalTypes
+	
 	App.rootRoute = Routes.animals_path()	
 	
 	App.addRegions
