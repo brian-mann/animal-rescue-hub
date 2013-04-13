@@ -1,10 +1,10 @@
 @Hub.module "AnimalsApp.List", (List, App, Backbone, Marionette, $, _) ->
 	
-	class List.Animal extends Marionette.ItemView
-		template: "animals_app/list/_animal"
+	class List.Animal extends App.Views.ItemView
+		template: "animals/list/_animal"
 		className: "item"
 	
-	class List.Animals extends Marionette.CollectionView
+	class List.Animals extends App.Views.CollectionView
 		# template: "animals_app/list/animals"
 		itemView: List.Animal
 		id: "animals-list-container"

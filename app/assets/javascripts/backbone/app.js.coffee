@@ -5,11 +5,11 @@
 	App.rootRoute = Routes.animals_path()	
 	
 	App.addRegions
-		mainRegion: "#main-region"
+		headerRegion: "#header-region"
+		mainRegion: 	"#main-region"
 	
-	# App.addInitializer ->
-	# 	App.module("HeaderApp").start()
-	# 	App.module("FooterApp").start()
+	App.addInitializer ->
+		App.module("HeaderApp").start()
 	
 	App.on "initialize:after", (options) ->
 		console.log "init:after"
