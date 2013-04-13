@@ -34,4 +34,7 @@ li 								{  list-style: none; }
 }
 .dropdown-link 					{  }
 .animal-profile-wrapper			{  @include border-radius; padding: 20px 0px;}
-.animal-profile 				{  margin: 20px; border: 1px solid #eee; }
+.animal-profile 				{  background-color: #fff; margin: 20px; padding: 20px; border: 1px solid #eee; 
+	.animal-profile-content 	{  width: 75%; float: left; position: relative;  }
+	.animal-profile-sidebar 	{  width: 25%; float: left; background-color: #f6f6f6;  }
+}

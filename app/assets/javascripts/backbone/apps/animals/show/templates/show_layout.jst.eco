@@ -1,11 +1,16 @@
 <div class="animal-profile-wrapper">
 	<div class="animal-profile">
-		<div class="<%= @animal_type.name %>-bg"></div>
-		<div class="animal-profile-name"><%= @name %></div>
-		<div class="animal-profile-age"><%= @age %></div>
-		
-
-		<div class="sidebar"><%= @goal_amount %></div>
+		<div class="animal-profile-content">
+			<div class="animal-icon <%= @animal_type.name %>-bg"></div>
+			<div class="animal-profile-name"><%= @name %></div>
+			<div class="animal-profile-age"><%= @age %></div>
+		</div>
+		<div class="animal-profile-sidebar">
+			<%= @goal_amount %>
+			<div class="progress progress-success">
+				<div class="bar" style="width: 60%;"></div>
+			</div>
+		</div>
 		<%= @avatar %>
 		
 		<div class="animal-profile-location"><%= @city %>, <%= @state.abbr %></div>
