@@ -1,4 +1,4 @@
-attributes :id, :name, :age, :gender, :goal_date, :goal_amount, :type_id, :avatar, :city, :zip
+attributes :id, :name, :age, :gender, :goal_date, :goal_amount, :type_id, :avatar, :city, :zip, :animal_type_id
 
 child :animal_type => :animal_type do
 	attributes :name

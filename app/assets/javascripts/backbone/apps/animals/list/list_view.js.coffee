@@ -18,8 +18,29 @@
 		itemViewContainer: "#animals-list"
 		id: "animals-list-container"
 
-		# events:
-		# 	
+		events:
+			"animal:type:clicked" : (e) -> console.log e
+			
+		collectionEvents:
+			"filter:on:animal:type:id" : "filterByID"
+		
+		# initialize: ->
+		# 	window.foo = @collection
+		# 	window.bar = @
+		
+		filterByID: (animalTypeID) ->
+			items = @getChildrenItemsByAnimalTypeID animalTypeID
+
+			@$el.isotope
+				filter: items
+		
+		getChildrenItemsByAnimalTypeID: (id) ->
+			views = []
+
+			for model in @collection.getModelsByAnimalTypeID id
+				views.push @children.findByModel model
+
+			_.pluck views, "el"
 		
 		onShow: ->
 			@$el.isotope
@@ -33,6 +54,8 @@
 	class List.AnimalType extends App.Views.ItemView
 		template: "animals/list/_type"
 		tagName: "li"
+		triggers:
+			"click" : "animal:type:clicked"
 			
 	class List.AnimalTypes extends App.Views.CompositeView
 		template: "animals/list/types"

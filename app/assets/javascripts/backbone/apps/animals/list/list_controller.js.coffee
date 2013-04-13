@@ -11,7 +11,7 @@
 				@layout = @getLayoutView()
 				
 				@layout.on "show", =>
-					@animalTypesRegion types
+					@animalTypesRegion animals, types
 					@animalsListRegion animals
 			
 				@layout.on "childview:animal:clicked", (iv, args) ->
@@ -23,8 +23,12 @@
 			listView = @getListView animals
 			@layout.animalsListRegion.show listView
 		
-		animalTypesRegion: (types) ->
+		animalTypesRegion: (animals, types) ->
 			typesView = @getTypesView types
+			
+			typesView.on "childview:animal:type:clicked", (iv, args) =>
+				animals.trigger "filter:on:animal:type:id", args.model.id
+			
 			@layout.animalTypesRegion.show typesView
 		
 		getTypesView: (types) ->

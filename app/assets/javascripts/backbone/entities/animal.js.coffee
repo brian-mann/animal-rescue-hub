@@ -7,6 +7,9 @@
 		model: Entities.Animal
 		
 		url: -> Routes.animals_path()
+		
+		getModelsByAnimalTypeID: (id) ->
+			@where animal_type_id: id
 	
 	API =
 		getAnimals: ->
