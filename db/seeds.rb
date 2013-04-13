@@ -15,7 +15,7 @@ avatars = (1..11).to_a
 		gender: rand(0..1),
 		goal_amount: rand(0..5000),
 		story: Forgery::LoremIpsum.sentences(rand(1..5)),
-		animal_type_id: rand(1..5),
+		animal_type_id: rand(1..4),
 		avatar: avatars.delete(avatars.sample).to_s + ".jpg",
 		city: Forgery::Address.city,
 		state_id: rand(1..51),
@@ -23,7 +23,7 @@ avatars = (1..11).to_a
 	})
 end
 
-%W{ bird dog cat rabbit exotic}.each do |type|
+%W{ bird dog cat other}.each do |type|
 	AnimalType.create name: type
 end
 

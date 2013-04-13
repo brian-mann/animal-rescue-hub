@@ -1,5 +1,5 @@
 <div class="animal">
-	<i class="icons-<%= @animal_type.name %>"></i>
+	<div class="animal-icon <%= @animal_type.name %>-bg"></div>
 	<div class="animal-location"><%= @city %>, <%= @state.abbr %></div>
 	<div class="image-wrapper">
 		<a class="image-link">
