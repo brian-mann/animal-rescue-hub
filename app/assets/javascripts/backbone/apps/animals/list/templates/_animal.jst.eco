@@ -7,10 +7,11 @@
 		</a>	
 	</div>
 	<span class="animal-name"><%= @name %></span>
+	<span class="animal-goal pull-right">$<%= @goal_amount %></span>
 	<div class="progress progress-success">
 		<div class="bar" style="width: 60%;"></div>
 	</div>
-	<span class="animal-goal"><%= @goal_amount %></span>
+	
 </div>
 
 <!-- zip: <%= @zip %> -->
