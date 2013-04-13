@@ -6,9 +6,9 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-avatars = (1..10).to_a
+avatars = (1..11).to_a
 
-5.times do
+10.times do
 	Animal.create({
 		name: Forgery::Name.first_name, 
 		age: Forgery::Basic.number(at_least: 1, at_most: 20),

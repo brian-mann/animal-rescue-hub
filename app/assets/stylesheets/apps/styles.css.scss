@@ -1,1 +1,5 @@
-.item						{  background-color: gray; margin: 10px; width: 100px; height: 100px;  }
+.item							{  background-color: gray; margin: 10px;   
+	.image-wrapper	{  max-height: 200px; max-width: 200px;  
+		img						{  max-width: 100%; max-height: 100%;  }
+	}
+}

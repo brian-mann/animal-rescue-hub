@@ -1,8 +1,10 @@
 name: <%= @name %>
 age: <%= @age %>
 goal_amount: <%= @goal_amount %>
-avatar: <%= @avatar %>
 type: <%= @animal_type.name %>
 city: <%= @city %>
 state: <%= @state.abbr %>
 zip: <%= @zip %>
+<div class="image-wrapper">
+	<img src="assets/<%= @avatar %>" />
+</div>
