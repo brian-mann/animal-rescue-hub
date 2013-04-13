@@ -9,6 +9,9 @@
 
 				listView = @getListView animals
 			
+				listView.on "childview:animal:clicked", (iv, args) ->
+					App.vent.trigger "animal:clicked", args.model		
+			
 				App.mainRegion.show listView
 		
 		getListView: (animals) ->

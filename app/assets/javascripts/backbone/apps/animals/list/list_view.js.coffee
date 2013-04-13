@@ -3,6 +3,8 @@
 	class List.Animal extends App.Views.ItemView
 		template: "animals/list/_animal"
 		className: "item"
+		triggers:
+			"click" : "animal:clicked"
 	
 	class List.Animals extends App.Views.CollectionView
 		# template: "animals_app/list/animals"

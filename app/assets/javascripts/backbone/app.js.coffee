@@ -12,7 +12,6 @@
 		App.module("HeaderApp").start()
 	
 	App.on "initialize:after", (options) ->
-		console.log "init:after"
 		@startHistory()
 		@navigate(@rootRoute, trigger: true) unless @getCurrentRoute()
 	

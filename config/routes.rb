@@ -3,7 +3,7 @@ AnimalRescueHub::Application.routes.draw do
 
   devise_for :admin_users, ActiveAdmin::Devise.config
 
-	resources :animals, :only => [:index]
+	resources :animals, :only => [:index, :show]
 
   root :to => 'application#index'
 
