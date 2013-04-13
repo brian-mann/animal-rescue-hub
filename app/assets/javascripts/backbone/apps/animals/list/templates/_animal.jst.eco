@@ -3,7 +3,7 @@
 	<div class="animal-location"><%= @city %>, <%= @state.abbr %></div>
 	<div class="image-wrapper">
 		<a class="image-link">
-			<img src="assets/<%= @avatar %>" />
+			<img src="assets/preview/<%= @avatar %>" />
 		</a>	
 	</div>
 	<span class="animal-name"><%= @name %></span>

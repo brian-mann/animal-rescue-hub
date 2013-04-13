@@ -21,6 +21,8 @@ gem "rabl"
 gem "gon"
 gem "js-routes"
 
+gem "rmagick"
+
 group :development, :test do
 	gem "forgery"
 end
