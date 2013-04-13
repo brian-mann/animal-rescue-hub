@@ -1,8 +1,14 @@
-name: <%= @name %>
-age: <%= @age %>
-goal_amount: <%= @goal_amount %>
-avatar: <%= @avatar %>
-type: <%= @animal_type.name %>
-city: <%= @city %>
-state: <%= @state.abbr %>
-zip: <%= @zip %>
+<div class="animal-profile-wrapper">
+	<div class="animal-profile">
+		<div class="<%= @animal_type.name %>-bg"></div>
+		<div class="animal-profile-name"><%= @name %></div>
+		<div class="animal-profile-age"><%= @age %></div>
+		
+
+		<div class="sidebar"><%= @goal_amount %></div>
+		<%= @avatar %>
+		
+		<div class="animal-profile-location"><%= @city %>, <%= @state.abbr %></div>
+		<%= @zip %>
+	</div>	
+</div>

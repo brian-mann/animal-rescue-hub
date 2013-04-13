@@ -12,6 +12,7 @@ img 							{  font-size: 0; }
 	}
 }
 #main-region 					{  margin-top: 40px; padding-left: 30px; padding-right: 20px;  }
+.item 							{  overflow: auto; }
 li 								{  list-style: none; }
 .animal 						{  @include box-shadow(rgba(black, .1) 0 0px 3px); overflow: visible; width: 200px; margin: 10px; padding: 0 10px 10px; background-color: #fff; border: 1px solid #eee; @include border-radius(3px); 
 	.image-wrapper 				{  position: relative; z-index: 1; margin-bottom: 10px; }
@@ -32,3 +33,5 @@ li 								{  list-style: none; }
 	&.other-bg:after 			{  background: $pastel-green image-url("bg-images/other-white.png") no-repeat 50% 30%;  }
 }
 .dropdown-link 					{  }
+.animal-profile-wrapper			{  @include border-radius; padding: 20px 0px;}
+.animal-profile 				{  margin: 20px; border: 1px solid #eee; }
