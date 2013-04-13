@@ -1,0 +1,6 @@
+// Sprite
+$icons-spacing: 20px;
+$icons-sprite-dimensions: true;
+$icons-clean-up: true;
+@import "icons/*.png";
+@include all-icons-sprites;

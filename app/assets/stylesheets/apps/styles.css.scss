@@ -10,7 +10,7 @@ li 								{  list-style: none; }
 	}
 }
 .animal-location 				{  text-align: right; color: #838080; }
-.animal-icon 					{  @include box-shadow(rgba(black, .2) 0 0px 2px); @include border-radius(1000px); background-color: #fff; z-index: 40; border: 1px solid #eee; height: 50px; width: 50px; position: absolute; top: 0; left: 0; 
+.animal-icon 					{  @include box-shadow(rgba(black, .2) 0 0px 0px); @include border-radius(1000px); background-color: #fff; z-index: 40; border: 1px solid #eee; height: 50px; width: 50px; position: absolute; top: 0; left: 0; 
 	&:after 					{  content: ""; height: 45px; width: 45px; @include border-radius(1000px); position: absolute; z-index: 60; top: 3px; left: 3px;  }
 	&.dog-bg:after				{  background: $pastel-blue image-url("bg-images/dog-white.png") no-repeat 50% 30%; }
 	&.cat-bg:after 				{  background: $pastel-red image-url("bg-images/cat-white.png") no-repeat 57% 38%;  }
