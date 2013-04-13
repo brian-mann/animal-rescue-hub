@@ -4,7 +4,8 @@ class Animal < ActiveRecord::Base
 	
 	belongs_to 	:animal_type
 	belongs_to 	:nonprofit
+	belongs_to 	:state
 	has_many 		:donors, :through => :donations
 	
-  attr_accessible :age, :donation_id, :gender, :goal_amount, :goal_date, :name, :need_level_id, :nonprofit_id, :story, :animal_type_id, :avatar
+  attr_accessible :age, :donation_id, :gender, :goal_amount, :goal_date, :name, :need_level_id, :nonprofit_id, :story, :animal_type_id, :avatar, :city, :state_id, :zip
 end

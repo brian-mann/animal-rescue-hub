@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130413044552) do
+ActiveRecord::Schema.define(:version => 20130413190850) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -55,6 +55,9 @@ ActiveRecord::Schema.define(:version => 20130413044552) do
   create_table "animals", :force => true do |t|
     t.string   "name"
     t.string   "avatar"
+    t.string   "city"
+    t.integer  "state_id"
+    t.string   "zip"
     t.integer  "age"
     t.boolean  "gender"
     t.datetime "goal_date"
@@ -94,6 +97,15 @@ ActiveRecord::Schema.define(:version => 20130413044552) do
     t.string   "state"
     t.string   "zip"
     t.string   "ein"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "states", :force => true do |t|
+    t.string   "name"
+    t.string   "abbr"
+    t.string   "ansi_code"
+    t.string   "statens"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end

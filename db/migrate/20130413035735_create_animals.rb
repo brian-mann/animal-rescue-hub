@@ -3,6 +3,9 @@ class CreateAnimals < ActiveRecord::Migration
     create_table :animals do |t|
       t.string :name
       t.string :avatar
+      t.string :city
+      t.integer :state_id
+      t.string :zip
       t.integer :age
       t.boolean :gender
       t.datetime :goal_date
