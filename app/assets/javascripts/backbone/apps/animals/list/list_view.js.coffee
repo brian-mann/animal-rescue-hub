@@ -2,20 +2,25 @@
 	
 	class List.Animal extends App.Views.ItemView
 		template: "animals/list/_animal"
+		tagName: "li"
 		className: "item"
 		triggers:
 			"click" : "animal:clicked"
 	
-	class List.Animals extends App.Views.CollectionView
-		# template: "animals_app/list/animals"
+	class List.Animals extends App.Views.CompositeView
+		template: "animals/list/animals"
 		itemView: List.Animal
+		itemViewContainer: "#animals-list"
 		id: "animals-list-container"
+
+		ui:
+			"animalsList" : "#animals-list"
 		
 		# events:
 		# 	
 		
 		onShow: ->
-			@$el.isotope()
+			@ui.animalsList.isotope()
 				# itemSelect: @$el.children()
 				# layoutMode: "fitRows"
 		

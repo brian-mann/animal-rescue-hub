@@ -1,10 +1,17 @@
-name: <%= @name %>
-age: <%= @age %>
-goal_amount: <%= @goal_amount %>
-type: <%= @animal_type.name %>
-city: <%= @city %>
-state: <%= @state.abbr %>
-zip: <%= @zip %>
-<div class="image-wrapper">
-	<img src="assets/<%= @avatar %>" />
+<div class="animal">
+	<i class="icons-<%= @animal_type.name %>"></i>
+	<div class="animal-location"><%= @city %>, <%= @state.abbr %></div>
+	<div class="image-wrapper">
+		<a class="image-link">
+			<img src="assets/<%= @avatar %>" />
+		</a>	
+	</div>
+	<span class="animal-name"><%= @name %></span>
+	<div class="progress progress-success">
+		<div class="bar" style="width: 60%;"></div>
+	</div>
+	<span class="animal-goal"><%= @goal_amount %></span>
 </div>
+
+<!-- zip: <%= @zip %> -->
+<!-- age: <%= @age %> -->

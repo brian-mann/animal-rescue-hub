@@ -1,5 +1,12 @@
-.item							{  background-color: gray; margin: 10px;   
-	.image-wrapper	{  max-height: 200px; max-width: 200px;  
-		img						{  max-width: 100%; max-height: 100%;  }
+html 							{  color: #444; }
+h1 								{  text-align: center; }
+#main-region 					{  margin-top: 50px; }
+li 								{  list-style: none; }
+.animal 						{  width: 200px; margin: 10px; padding: 0 10px 10px; background-color: #fff; border: 1px solid #eee; @include border-radius(3px); 
+	.image-wrapper 				{  position: relative; z-index: 1;}
+	.image-link					{  
+		&:after 				{  bottom: 0; content: ""; height: 1px; left: 0; margin-top: -1px; position: absolute; right: 0; z-index: 10;}
+		img						{  min-width: 100%;  max-width: 100%; max-height: 100%; }
 	}
+	.animal-location 			{  text-align: right; color: #838080;}
 }
