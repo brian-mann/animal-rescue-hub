@@ -2,6 +2,7 @@ class CreateAnimals < ActiveRecord::Migration
   def change
     create_table :animals do |t|
       t.string :name
+      t.string :avatar
       t.integer :age
       t.boolean :gender
       t.datetime :goal_date

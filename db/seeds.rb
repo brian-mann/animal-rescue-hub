@@ -6,6 +6,8 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
+avatars = (1..10).to_a
+
 5.times do
 	Animal.create({
 		name: Forgery::Name.first_name, 
@@ -14,6 +16,7 @@
 		goal_amount: rand(0..5000),
 		story: Forgery::LoremIpsum.sentences(rand(1..5)),
 		animal_type_id: rand(1..5),
+		avatar: avatars.delete(avatars.sample).to_s + ".jpg",
 	})
 end
 

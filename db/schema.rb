@@ -54,6 +54,7 @@ ActiveRecord::Schema.define(:version => 20130413044552) do
 
   create_table "animals", :force => true do |t|
     t.string   "name"
+    t.string   "avatar"
     t.integer  "age"
     t.boolean  "gender"
     t.datetime "goal_date"
