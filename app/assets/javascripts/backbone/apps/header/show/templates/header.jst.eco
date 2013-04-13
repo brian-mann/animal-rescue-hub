@@ -1,1 +1,17 @@
-header
+<div class="navbar navbar-fixed-top">
+	<div class="navbar-inner">
+		<div class="container">
+			<a class="brand">Fur & Feathers Fund</a>
+			<ul class="nav">
+				<li>
+					<a href="#">Browse Animals</a>
+				</li>
+			</ul>
+			<ul class="nav pull-right">
+				<li>
+					<a href="#">Sign In</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>

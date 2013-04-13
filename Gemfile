@@ -17,7 +17,7 @@ gem 'activeadmin'
 
 gem "thin"
 gem "rabl"
-gem "oj"
+# gem "oj"
 gem "gon"
 gem "js-routes"
 
