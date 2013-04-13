@@ -1,22 +1,29 @@
-html 							{  color: #444; background-color: #f3f3f3; }
-h1 								{  text-align: center; font-family: 'Merienda', cursive; color: #585655; font-size: 26px; padding-top: 20px; margin-bottom: 0;  }
+html 							{  color: #444; background-color: #eee; }
+body 							{  background-color: #f4f4f4; }
+h1 								{  clear: both; text-align: center; font-family: 'Merienda', cursive; color: #585655; font-size: 26px; padding-top: 20px; margin-bottom: 0;  }
 h2 								{  text-align: center; color: #c1c1c0; font-size: 16px; line-height: 24px; margin-top: 0; margin-bottom: 30px; }
-.navbar-inner .nav.right		{  padding-right: 40px; 
-
+img 							{  font-size: 0; }
+.navbar 						{  background: none; background-color: #fff; }
+.navbar-inner .nav.pull-right		{  padding-right: 40px;  }
+.brand 							{  color: $pastel-red; padding-left: 60px !important; font-family: 'Merienda', cursive; }
+.category-list  				{  overflow: auto; 
+	&>li 						{  float: left; 
+		a 						{  display: block; padding: 3px 20px; }
+	}
 }
-.brand 							{  padding-left: 60px !important; font-family: 'Merienda', cursive; }
-#main-region 					{  margin-top: 40px; padding-left: 40px; padding-right: 20px;  }
+#main-region 					{  margin-top: 40px; padding-left: 30px; padding-right: 20px;  }
 li 								{  list-style: none; }
-.animal 						{  @include box-shadow(rgba(black, .2) 0 0px 4px); overflow: visible; width: 200px; margin: 10px; padding: 0 10px 10px; background-color: #fff; border: 1px solid #eee; @include border-radius(3px); 
-	.image-wrapper 				{  position: relative; z-index: 1;}
+.animal 						{  @include box-shadow(rgba(black, .1) 0 0px 3px); overflow: visible; width: 200px; margin: 10px; padding: 0 10px 10px; background-color: #fff; border: 1px solid #eee; @include border-radius(3px); 
+	.image-wrapper 				{  position: relative; z-index: 1; margin-bottom: 10px; }
 	.image-link					{  
 		&:after 				{  bottom: 0; content: ""; height: 1px; left: 0; margin-top: -1px; position: absolute; right: 0; z-index: 10;}
 		img						{  min-width: 100%;  max-width: 100%; max-height: 100%; }
 	}
+	.progress 					{  height: 14px; }
 }
-.animal-name 					{  font-family: 'Merienda', cursive; font-weight: bold; font-size: 18px; }
+.animal-name 					{  clear: both; margin-top: 5px; color: #555; font-family: 'Merienda', cursive; font-weight: bold; font-size: 18px; }
 .animal-location 				{  text-align: right; color: #838080; }
-.animal-icon 					{  @include box-shadow(rgba(black, .2) 0 0px 2px); @include border-radius(1000px); background-color: #fff; z-index: 40; border: 1px solid #eee; height: 50px; width: 50px; position: absolute; top: 0; left: 0; 
+.animal-icon 					{  @include box-shadow(rgba(black, .2) 0 0px 1px); @include border-radius(1000px); background-color: #fff; z-index: 40; border: 1px solid #eee; height: 50px; width: 50px; position: absolute; top: 0; left: 0; 
 	&:after 					{  content: ""; height: 45px; width: 45px; @include border-radius(1000px); position: absolute; z-index: 60; top: 3px; left: 3px;  }
 	&.dog-bg:after				{  background: $pastel-blue image-url("bg-images/dog-white.png") no-repeat 50% 30%; }
 	&.cat-bg:after 				{  background: $pastel-red image-url("bg-images/cat-white.png") no-repeat 57% 38%;  }
