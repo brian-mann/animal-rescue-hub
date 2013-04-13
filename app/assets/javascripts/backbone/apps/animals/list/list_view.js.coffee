@@ -18,9 +18,6 @@
 		itemViewContainer: "#animals-list"
 		id: "animals-list-container"
 
-		events:
-			"animal:type:clicked" : (e) -> console.log e
-			
 		collectionEvents:
 			"filter:on:animal:type:id" : "filterByID"
 		

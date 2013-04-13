@@ -21,6 +21,10 @@
 		
 		animalsListRegion: (animals) ->
 			listView = @getListView animals
+			
+			listView.on "childview:animal:clicked", (iv, args) ->
+				App.vent.trigger "animal:clicked", args.model
+			
 			@layout.animalsListRegion.show listView
 		
 		animalTypesRegion: (animals, types) ->
