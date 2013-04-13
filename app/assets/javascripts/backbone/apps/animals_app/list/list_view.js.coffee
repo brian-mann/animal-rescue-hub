@@ -5,12 +5,18 @@
 		className: "item"
 	
 	class List.Animals extends Marionette.CollectionView
-		template: "animals_app/list/animals"
+		# template: "animals_app/list/animals"
 		itemView: List.Animal
-		id: "container"
+		id: "animals-list-container"
+		
+		# events:
+		# 	
 		
 		onShow: ->
-			@$el.isotope
+			@$el.isotope()
 				# itemSelect: @$el.children()
-				layoutMode: "fitRows"
+				# layoutMode: "fitRows"
+		
+		onClose: ->
+			@$el.isotope('destroy')
 			
