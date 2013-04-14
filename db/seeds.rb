@@ -12,8 +12,14 @@ numbers = (1..10).to_a.map { |num| num * 10 }
 numbers << (1..40).to_a.map { |num| num * 50  }
 numbers.flatten!.uniq!
 
-{dog: 2, cat: 3, other: 4}.each do |key, type|
-	5.times do |num|
+animals = {
+	dog: 		{ type: 2, count: 4 },
+	cat: 		{ type: 3, count: 6 },
+	other: 	{ type: 4, count: 2 },
+}
+
+animals.each do |key, hash|
+	hash[:count].times do |num|
 		num += 1
 
 		Animal.create({
@@ -22,13 +28,40 @@ numbers.flatten!.uniq!
 			gender: rand(0..1),
 			goal_amount: numbers.delete(numbers.sample),
 			story: Forgery::LoremIpsum.paragraphs(rand(1..3)),
-			animal_type_id: type,
-			avatar: "#{key}-#{num}.jpg",
+			animal_type_id: hash[:type],
+			avatar: "#{key}/#{key.to_s.capitalize_first}#{num}.jpg",
 			city: Forgery::Address.city,
 			state_id: rand(1..51),
 			zip: Forgery::Address.zip,
+			progress: rand(5..100).to_s + "%",
 		})
 	end
+end
+
+birds = [
+	{name: "Chimes"},
+	{name: "Fernando"},
+	{name: "Joey"},
+	{name: "Kili"},
+	{name: "Persephone"},
+	{name: "Sebastian", story: "foobar" },
+	{name: "Sully"},      
+]
+
+birds.each do |bird|
+	Animal.create({
+		name: bird[:name],
+		age: Forgery::Basic.number(at_least: 1, at_most: 20),
+		gender: rand(0..1),
+		goal_amount: numbers.delete(numbers.sample),
+		story: ( bird[:story].present? ? bird[:story] : Forgery::LoremIpsum.paragraphs(rand(1..3)) ),
+		animal_type_id: 1,
+		avatar: "bird/#{bird[:name]}.jpg",
+		city: "Atlanta",
+		state_id: 11,
+		zip: "30214",
+		progress: rand(5..100).to_s + "%",
+	})
 end
 
 # 10.times do

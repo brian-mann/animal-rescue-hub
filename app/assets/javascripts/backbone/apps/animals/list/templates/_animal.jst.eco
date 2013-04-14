@@ -3,12 +3,12 @@
 	<div class="animal-location"><%= @city %>, <%= @state.abbr %></div>
 	<div class="image-wrapper">
 		<i class="icons-star-empty <%= "active" if @favorited %>"></i>
-		<img src="assets/preview/<%= @avatar %>" height="<%= @avatar_height %>" width="<%= @avatar_width %>" />
+		<img src="assets/preview/<%= @avatar %>" />
 	</div>
 	<span class="animal-name"><%= @name %></span>
 	<span class="animal-goal pull-right">$<%= @goal_amount %></span>
 	<div class="progress progress-success favorite-animal">
-		<div class="bar" style="width: 60%;"></div>
+		<div class="bar" style="width: <%= @progress %>;"></div>
 	</div>
 </div>
 
