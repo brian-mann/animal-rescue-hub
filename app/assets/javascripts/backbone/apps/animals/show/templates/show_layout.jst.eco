@@ -13,21 +13,26 @@
 				<i class="icons-email-32"></i>
 			</div>
 			<div class="animal-profile-article">
-				<img src="http://placehold.it/300x350">
+				<img src="assets/images/profile/<%= @avatar %>" alt= "" />
 				<h3><%= @name %>'s Story</h3>
-				<p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Nulla vitae elit libero, a pharetra augue. Donec sed odio dui. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</p>
+				<p>Sebastian was found on a local buy/sell paper offering a cockatoo for cheap. After posting about it and forwarding me a photo, it was clear this bird has a severe prolapse that needs medical attention.</p> 
 
-<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+<p>Sebastian was living in a 10 x 10 shack with a dozen other birds in a small 18 x 18 rusty cage, with no toys, a single perch, sunflower seed diet, and a prolapse. This is a severe prolapse and the owners claim it has been 'like that' for the past 6 months. The bird has been outside in this unheated shack during 20 degree weather.</p>
 
-<p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Aenean lacinia bibendum nulla sed consectetur. Vestibulum id ligula porta felis euismod semper. Sed posuere consectetur est at lobortis. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+<p>Between my friend, myself, and a group of online bird buddies I networked and scraped together a ransom fee for the bird, as well as located a rescue willing to take him in.</p>
 
-<p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean lacinia bibendum nulla sed consectetur. Donec ullamcorper nulla non metus auctor fringilla. Donec id elit non mi porta gravida at eget metus. Curabitur blandit tempus porttitor.</p>
+<p>After about 6 hours of driving, collecting the bird, dropping him off to quarantine at a friends house (a no pet household), we arrived home. Sebastian was then transported to Miss Vicki’s Parrot Village, to a rescue in Georgia, where he already has a vet appointment lined up. The trip was an 8 hours long drive time.</p>
 
-<p>Aenean lacinia bibendum nulla sed consectetur. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam quis risus eget urna mollis ornare vel eu leo.</p>
+<p>We took Sebastian to the vet. He did great, and he was so excited to be home that he stepped up out of their carriers!</p>
 
-<p>Maecenas faucibus mollis interdum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod.</p>
+<p>The prognosis for Sebastian is not so good, but his Veterinarian is helping us work with him. She sutured his vent, gave him some pain meds and antibiotics, and even trimmed his nails while he was under anesthesia...I am sure he is grateful for that.</p>
+
+<p>We are going to give him the best shot possible. Hopefully getting him on a good diet and in a healthy atmosphere will help him improve enough where his quality of life is not inhumane.</p>
+
+<p>He will be going back in for another surgery, but we are going to work with the other issues while these sutures are in place. Please keep him in your thoughts, and we will keep you posted daily!
+</p>
 			</div>
-			<%= @avatar %>			
+						
 			<%= @zip %>
 			<%= @age %>
 		</div>
