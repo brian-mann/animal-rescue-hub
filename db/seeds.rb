@@ -22,19 +22,27 @@ animals = {
 animals.each do |key, hash|
 	hash[:count].times do |num|
 		num += 1
-
+		
+		goal 					= numbers.delete(numbers.sample)
+		goal_progress = (goal * (rand(1..10).to_f / 10))
+		
+		# p goal
+		# p goal_progress.to_i
+		# p sprintf("%g", ((goal_progress / goal) * 100)) + "%"
+		
 		Animal.create({
 			name: Forgery::Name.first_name, 
 			age: Forgery::Basic.number(at_least: 1, at_most: 20),
 			gender: rand(0..1),
-			goal_amount: numbers.delete(numbers.sample),
+			goal_amount: goal,
+			goal_progress: goal_progress.to_i,
+			progress: sprintf("%g", ((goal_progress / goal) * 100)) + "%",
 			story: Forgery::LoremIpsum.paragraphs(rand(3..6)),
 			animal_type_id: hash[:type],
 			avatar: "#{key}/#{key.to_s.capitalize_first}#{num}.jpg",
 			city: Forgery::Address.city,
 			state_id: rand(1..51),
 			zip: Forgery::Address.zip,
-			progress: rand(5..100).to_s + "%",
 		})
 	end
 end
@@ -50,18 +58,23 @@ birds = [
 ]
 
 birds.each do |bird|
+	
+	goal 					= numbers.delete(numbers.sample)
+	goal_progress = (goal * (rand(1..10).to_f / 10))
+	
 	Animal.create({
 		name: bird[:name],
 		age: Forgery::Basic.number(at_least: 1, at_most: 20),
 		gender: rand(0..1),
-		goal_amount: numbers.delete(numbers.sample),
+		goal_amount: goal,
+		goal_progress: goal_progress.to_i,
+		progress: sprintf("%g", ((goal_progress / goal) * 100)) + "%",
 		story: ( bird[:story].present? ? bird[:story] : Forgery::LoremIpsum.paragraphs(rand(1..3)) ),
 		animal_type_id: 1,
 		avatar: "bird/#{bird[:name]}.jpg",
 		city: "Atlanta",
 		state_id: 11,
 		zip: "30214",
-		progress: rand(5..100).to_s + "%",
 	})
 end
 

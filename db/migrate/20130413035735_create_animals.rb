@@ -10,6 +10,7 @@ class CreateAnimals < ActiveRecord::Migration
       t.boolean :gender
       t.datetime :goal_date
       t.integer :goal_amount
+      t.integer :goal_progress
       t.text :story
       t.integer :nonprofit_id
       t.integer :donation_id
