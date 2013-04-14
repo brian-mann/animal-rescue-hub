@@ -6,3 +6,6 @@
 	<h2>in All Cities</h2>
 	<div id="animals-list-region"></div>
 </div>
+<div class="footer">
+	<p>Copyright 2013 Fur & Feathers Fund</p>
+</div>

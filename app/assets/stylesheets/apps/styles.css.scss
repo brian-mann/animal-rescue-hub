@@ -7,6 +7,7 @@ h3 								{  margin-bottom: 5px; }
 h4 								{  font-style: 18px; }
 img 							{  font-size: 0; }
 p 								{  line-height: 21px; }
+li 								{  list-style: none; }
 .progress 						{  background-image: none; border: 1px solid #ddd; background-color: #fff; }
 .navbar 						{  background: none; background-color: #fff; }
 .navbar-inner .nav.pull-right	{  padding-right: 40px;  }
@@ -22,16 +23,19 @@ p 								{  line-height: 21px; }
 	.nav.pull-right 			{  padding-right: 20px; }
 }
 .category-list  				{  padding-left: 20px;
-	&.nav>li>a.btn 				{  padding: 2px 7px 3px; margin-right: 10px; line-height: 20px; height: 20px; border: 1px solid #ddd; 
-		&:hover, &.active, &:focus 		{  background-image: none; background-color: #e3e3e3; }
-		&.active 				{  font-weight: bold; }
-		i 						{  margin-right: 3px; }
+	&.nav>li 					{
+		&.active a 				{  background-image: none; background-color: #e3e3e3; font-weight: bold; @include box-shadow((black, .0) 0 0 0 inset); }
+		&>a.btn 				{  padding: 2px 7px 3px; margin-right: 10px; line-height: 20px; height: 20px; border: 1px solid #ddd; 
+			&:hover, &:focus 	{  background-image: none; background-color: #e3e3e3; }
+			&.active 			{  font-weight: bold; }
+			i 					{  margin-right: 3px; }
+		}
 	}
 }
 #main-region 					{  margin-top: 45px; }
 .layout-wrapper 				{  padding-left: 30px; padding-right: 20px; }
 .item 							{  overflow: auto; }
-li 								{  list-style: none; }
+
 .animal 						{  cursor: pointer; @include box-shadow(rgba(black, .1) 0 0px 3px); overflow: visible; width: 200px; margin: 10px; padding: 0 10px 10px; background-color: #fff; border: 1px solid #eee; @include border-radius(3px); 
 	.image-wrapper 				{  position: relative; z-index: 1; margin-bottom: 10px; 
 		i 						{  position: absolute; right: 5px; top: 5px; z-index: 10; 
@@ -83,8 +87,16 @@ li 								{  list-style: none; }
 		&:first-child  			{  background-color: #e3e3e3; padding-left: 4px; @include white-text-shadow; }
 	}
 }
-.photo-grid>div 				{  max-width: 180px; border: 1px solid #ddd; float: left; margin: 10px; }
+.needs-area 					{  clear: both; 
+	ul>li 						{  list-style-type: disc; margin-bottom: 3px; color: #777; }
+}
+.photo-grid 					{  clear: both; 
+	&>div 						{  max-width: 180px; border: 1px solid #ddd; float: left; margin: 10px; }
+}
 .nonprofit-icon 				{  margin-top: 5px; margin-right: 5px; margin-bottom: 5px; border: 1px solid #ddd; 
 	img 						{  height: 80px; width: 80px; }
 }
 .donate-button 					{  margin-bottom: 30px; @include responsive-width(100%); padding: 11px 19px; background-color: #d34d41; border: 1px solid #bd4237;  }
+.footer 						{  margin-top: 40px;  background-color: #eee; color: #777;  text-align: center; @include white-text-shadow; padding: 20px; border-top: 1px solid #e4e4e4; 
+	p 							{  margin-bottom: 0; }
+}

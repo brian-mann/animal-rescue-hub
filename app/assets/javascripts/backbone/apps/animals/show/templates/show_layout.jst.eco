@@ -25,8 +25,19 @@
 					<h3><%= @name %>'s Story</h3>
 					<p><%- @story %>
 				</div>
+				<div class="needs-area">
+					<h4>Donations will be Spent On:</h4>
+					<ul>
+						<li>Transportation costs to and from vet.</li>
+						<li>Veterinary Visit including Blood Work.</li>
+						<li>A new carrier cage.</li>
+						<li>Food and Toys for 6 months.</li>
+						<li>3 surgeries (estimated), only 1 performed so far.</li>
+						<li>New perches</li>
+					</ul>
+				</div>
 				<div class="photo-grid">
-					<h3>Photos</h3>
+					<h4>Photos</h4>
 					<% for num in [1..9]: %>
 						<div>
 							<a href="assets/sebastian/<%= num %>.jpg" class="thumb" rel="thumbnail">
@@ -34,7 +45,7 @@
 							</a>
 						</div>
 					<% end %>
-				</div>				
+				</div>
 			</div>
 			<div class="animal-profile-sidebar">
 				<a class="btn btn-large btn-danger donate-button">Donate Now</a>
@@ -67,4 +78,7 @@
 			</div>
 		</div>	
 	</div>
+</div>
+<div class="footer">
+	<p>Copyright 2013 Fur & Feathers Fund</p>
 </div>
