@@ -10,11 +10,15 @@ p 								{  line-height: 21px; }
 .progress 						{  background-image: none; border: 1px solid #ddd; background-color: #fff; }
 .navbar 						{  background: none; background-color: #fff; }
 .navbar-inner .nav.pull-right	{  padding-right: 40px;  }
-.secondary-nav 					{  background-color: #e4e4e4; border-bottom: #ddd;   }
+.navbar-inner 					{  @include box-shadow(rgba(black, .0) 0 0px 1px); @include box-shadow(rgba(black, .0) 0 0px 1px inset);}
 .brand 							{  color: $pastel-red; padding-left: 60px !important; font-family: 'Merienda', cursive; }
-.category-list  				{  overflow: auto; 
-	&>li 						{  float: left; 
-		a 						{  display: block; padding: 3px 20px; }
+//-----------------------Secondary Nav-------------------------------//
+#secondary-nav .navbar-inner 	{  background-image: none; background-color: #eee; border-color: #ddd; }
+.category-list  				{  
+	&.nav>li>a.btn 				{  padding: 2px 7px 3px; margin-right: 10px; line-height: 20px; height: 20px; border: 1px solid #ddd; 
+		&:hover, &.active, &:focus 		{  background-image: none; background-color: #e3e3e3; }
+		&.active 				{  font-weight: bold; }
+		i 						{  margin-right: 3px; }
 	}
 }
 #main-region 					{  margin-top: 40px; padding-left: 30px; padding-right: 20px;  }

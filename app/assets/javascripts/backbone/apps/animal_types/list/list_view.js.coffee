@@ -9,5 +9,5 @@
 	class List.AnimalTypes extends App.Views.CompositeView
 		template: "animal_types/list/types"
 		itemView: List.AnimalType
-		itemViewContainer: "ul"
+		itemViewContainer: ".category-list"
 	
