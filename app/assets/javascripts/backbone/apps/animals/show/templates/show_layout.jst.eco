@@ -33,11 +33,11 @@
 				<a class="btn btn-large btn-danger donate-button">Donate Now</a>
 				<div class="goal-area">
 					<div class="goal-progress">
-						<span class="goal-money">$1300</span> of 
+						<span class="goal-money">$<%= @goal_progress %></span> of 
 						<span class="goal-money"><%= @goal_amount %></span> met
 					</div>
 					<div class="progress progress-success">
-						<div class="bar" style="width: 100%;"></div>
+						<div class="bar" style="width: <%= @progress %>;"></div>
 					</div>
 				</div>	
 				<div class="nonprofit-summary">
