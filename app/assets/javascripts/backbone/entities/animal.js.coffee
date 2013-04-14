@@ -23,6 +23,11 @@
 			else 
 				@add(animal)
 				animal.set favorited: true
+		
+		checkFavorites: (favorites) ->
+			ids = favorites.pluck("id")
+			for id in ids
+				@get(id).set favorited: true
 	
 	API =
 		getAnimals: ->

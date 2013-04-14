@@ -7,7 +7,9 @@
 			types		= App.request "app:animal:types"
 			
 			App.execute "when:fetched", [animals, types], =>
-
+				favorites = App.request "app:favorite:animals"
+				animals.checkFavorites(favorites)
+				
 				@layout = @getLayoutView()
 				
 				@layout.on "show", =>
