@@ -71,14 +71,3 @@
 		
 		onClose: ->
 			@$el.isotope('destroy')
-	
-	class List.AnimalType extends App.Views.ItemView
-		template: "animals/list/_type"
-		tagName: "li"
-		triggers:
-			"click" : "animal:type:clicked"
-			
-	class List.AnimalTypes extends App.Views.CompositeView
-		template: "animals/list/types"
-		itemView: List.AnimalType
-		itemViewContainer: "ul"
