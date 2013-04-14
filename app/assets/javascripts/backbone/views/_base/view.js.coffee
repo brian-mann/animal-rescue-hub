@@ -18,6 +18,6 @@
 				_.defaults options,
 					external: false
 				
-				url = "#" + url unless options.external
+				url = "#" + url.slice(1) unless options.external
 				
 				"<a href='#{url}'>#{@escape(name)}</a>"

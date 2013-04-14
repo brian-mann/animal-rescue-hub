@@ -1,6 +1,6 @@
 <div class="navbar navbar-fixed-top">
 	<div class="navbar-inner">
-		<a href="/" class="brand">Fur & Feathers Fund</a>
+		<a href="#animals" class="brand">Fur & Feathers Fund</a>
 		<ul class="nav pull-right">
 			<li>
 				<a href="#" id="favorites-region"></a>
