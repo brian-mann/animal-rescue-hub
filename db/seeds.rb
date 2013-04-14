@@ -8,27 +8,50 @@
 
 avatars = (1..11).to_a
 
-10.times do
-	avatar = avatars.delete(avatars.sample).to_s + ".jpg"
-	file = File.open("app/assets/images/preview/#{avatar}")
-	image = Magick::Image.read(file).first
-	
-	
-	Animal.create({
-		name: Forgery::Name.first_name, 
-		age: Forgery::Basic.number(at_least: 1, at_most: 20),
-		gender: rand(0..1),
-		goal_amount: rand(0..5000),
-		story: Forgery::LoremIpsum.sentences(rand(1..5)),
-		animal_type_id: rand(1..4),
-		avatar: avatar,
-		city: Forgery::Address.city,
-		state_id: rand(1..51),
-		zip: Forgery::Address.zip,
-		avatar_width: image.columns,
-		avatar_height: image.rows,
-	})
+numbers = (1..10).to_a.map { |num| num * 10 }
+numbers << (1..40).to_a.map { |num| num * 50  }
+numbers.flatten!.uniq!
+
+{dog: 2, cat: 3, other: 4}.each do |key, type|
+	5.times do |num|
+		num += 1
+
+		Animal.create({
+			name: Forgery::Name.first_name, 
+			age: Forgery::Basic.number(at_least: 1, at_most: 20),
+			gender: rand(0..1),
+			goal_amount: numbers.delete(numbers.sample),
+			story: Forgery::LoremIpsum.paragraphs(rand(1..3)),
+			animal_type_id: type,
+			avatar: "#{key}-#{num}.jpg",
+			city: Forgery::Address.city,
+			state_id: rand(1..51),
+			zip: Forgery::Address.zip,
+		})
+	end
 end
+
+# 10.times do
+# 	avatar = avatars.delete(avatars.sample).to_s + ".jpg"
+# 	file = File.open("app/assets/images/preview/#{avatar}")
+# 	image = Magick::Image.read(file).first
+# 	
+# 	
+# 	Animal.create({
+# 		name: Forgery::Name.first_name, 
+# 		age: Forgery::Basic.number(at_least: 1, at_most: 20),
+# 		gender: rand(0..1),
+# 		goal_amount: rand(0..5000),
+# 		story: Forgery::LoremIpsum.sentences(rand(1..5)),
+# 		animal_type_id: rand(1..4),
+# 		avatar: avatar,
+# 		city: Forgery::Address.city,
+# 		state_id: rand(1..51),
+# 		zip: Forgery::Address.zip,
+# 		avatar_width: image.columns,
+# 		avatar_height: image.rows,
+# 	})
+# end
 
 %W{ bird dog cat other }.each do |type|
 	AnimalType.create name: type
