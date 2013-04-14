@@ -12,6 +12,14 @@
 		className: "item"
 		triggers:
 			"click" : "animal:clicked"
+		events:
+			"click .favorite-animal" : "transferToFavorites"
+		
+		transferToFavorites: (e) ->
+			e.stopPropagation()
+			@$el.effect "transfer",
+				to: $(".brand")
+			, 400
 	
 	class List.Animals extends App.Views.CollectionView
 		itemView: List.Animal

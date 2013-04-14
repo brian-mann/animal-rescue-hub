@@ -7,7 +7,7 @@
 	</div>
 	<span class="animal-name"><%= @name %></span>
 	<span class="animal-goal pull-right">$<%= @goal_amount %></span>
-	<div class="progress progress-success">
+	<div class="progress progress-success favorite-animal">
 		<div class="bar" style="width: 60%;"></div>
 	</div>
 </div>

@@ -11,6 +11,7 @@
 // GO AFTER THE REQUIRES BELOW.
 //
 //= require jquery
+//= require jquery.ui.effect-transfer
 //= require js-routes
 
 //= require lib/underscore
