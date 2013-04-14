@@ -36,7 +36,7 @@
 					Sort
 					<b class="caret"></b>
 				</a>				
-				<ul class="dropdown-menu">
+				<ul class="dropdown-menu" id="sort-by">
 					<li>
 						<a href="#">Newest</a>
 					</li>
@@ -44,10 +44,10 @@
 						<a href="#">Expiring Soon</a>
 					</li>
 					<li>
-						<a href="#">Highest Donation Amount</a>
+						<a data-sort="donation" data-ascending="false" href="#">Highest Donation Amount</a>
 					</li>
 					<li>
-						<a href="#">Lowest Donation Amount</a>
+						<a data-sort="donation" data-ascending="true" href="#">Lowest Donation Amount</a>
 					</li>
 				</ul>	
 			</li>

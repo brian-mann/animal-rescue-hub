@@ -11,6 +11,9 @@
 					model.unpick()
 				args.model.pick()
 			
+			# listView.on "sort:animals", (obj) ->
+			# 	console.log obj
+			
 			listView
 		
 		getListView: (types) ->

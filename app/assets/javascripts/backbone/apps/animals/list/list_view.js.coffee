@@ -88,7 +88,11 @@
 					# itemSelect: @$el.children()
 					# layoutMode: "fitRows"
 				# @$el.show()
-				@$el.isotope()
+				@$el.isotope
+					getSortData:
+						donation: (child) =>
+							@children.findByIndex(child.index()).model.get("goal_amount")
+						
 				children.show()
 				# @$el.isotope( 'remove', children );
 				@$el.isotope( 'insert', children );
