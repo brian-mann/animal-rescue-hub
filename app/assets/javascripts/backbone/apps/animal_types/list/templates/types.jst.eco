@@ -4,7 +4,7 @@
 		<ul class="nav pull-right">
 			<li class="dropdown">
 				<a href="#" class="dropdown-toggle" data-toggle="dropdown">
-					Filter
+					<i class="icon-filter"></i> Filter
 					<b class="caret"></b>
 				</a>				
 				<ul class="dropdown-menu">
@@ -33,7 +33,7 @@
 			</li>
 			<li class="dropdown">
 				<a href="#" class="dropdown-toggle" data-toggle="dropdown">
-					Sort
+					<i class="icon-list"></i> Sort
 					<b class="caret"></b>
 				</a>				
 				<ul class="dropdown-menu" id="sort-by">
