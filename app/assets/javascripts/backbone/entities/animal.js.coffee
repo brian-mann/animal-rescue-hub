@@ -32,6 +32,7 @@
 	API =
 		getAnimals: ->
 			animals = new Entities.AnimalsCollection
+			animals.defaultTitle = "Birds, Dogs, Cats & Other"
 			animals.fetch
 				reset: true
 			animals
@@ -43,7 +44,9 @@
 			animal
 		
 		getFavoriteAnimals: ->
-			new Entities.AnimalsCollection
+			animals = new Entities.AnimalsCollection
+			animals.defaultTitle = "Favorites"
+			animals
 	
 	App.reqres.setHandler "animal:entities", ->
 		API.getAnimals()

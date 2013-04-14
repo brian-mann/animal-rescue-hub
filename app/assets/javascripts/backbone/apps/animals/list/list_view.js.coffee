@@ -2,9 +2,22 @@
 	
 	class List.Layout extends App.Views.Layout
 		template: "animals/list/list_layout"
+
 		regions:
 			animalTypesRegion: "#animal-types-region"
 			animalsListRegion: "#animals-list-region"
+		
+		ui:
+			animalTypeName: "#animal-type-name"
+
+		collectionEvents:
+			"filter:on:animal:type:id" : "filterByName"
+		
+		serializeData: ->
+			title: @collection.defaultTitle
+
+		filterByName: (name) ->
+			@ui.animalTypeName.text name.capitalizeFirst() + "s"
 	
 	class List.Animal extends App.Views.ItemView
 		template: "animals/list/_animal"
@@ -36,13 +49,13 @@
 		id: "animals-list-container"
 
 		collectionEvents:
-			"filter:on:animal:type:id" : "filterByID"
+			"filter:on:animal:type:id" : "filterByName"
 		
 		# initialize: ->
 		# 	window.foo = @collection
 		# 	window.bar = @
 		
-		filterByID: (animalType) ->
+		filterByName: (name) ->
 
 			# items = @getChildrenItemsByAnimalTypeID animalTypeID
 			
@@ -52,7 +65,7 @@
 			# 	filter: "*"
 			
 			@$el.isotope
-				filter: ".item.#{animalType}"
+				filter: ".item.#{name}"
 		
 		getChildrenItemsByAnimalTypeID: (id) ->
 			views = []

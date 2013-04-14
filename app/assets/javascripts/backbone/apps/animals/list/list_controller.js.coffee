@@ -10,7 +10,7 @@
 				favorites = App.request "app:favorite:animals"
 				animals.checkFavorites(favorites)
 				
-				@layout = @getLayoutView()
+				@layout = @getLayoutView animals
 				
 				@layout.on "show", =>
 					@animalTypesRegion animals, types
@@ -41,5 +41,6 @@
 			new List.Animals
 				collection: animals
 		
-		getLayoutView: ->
+		getLayoutView: (animals) ->
 			new List.Layout
+				collection: animals
