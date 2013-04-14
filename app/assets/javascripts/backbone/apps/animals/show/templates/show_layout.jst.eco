@@ -26,8 +26,8 @@
 					<p><%- @story %>
 				</div>
 							
-				<%= @zip %>
-				<%= @age %>
+<!-- 				<%= @zip %> -->
+				
 			</div>
 			<div class="animal-profile-sidebar">
 				<a class="btn btn-large btn-danger donate-button">Donate Now</a>
@@ -39,10 +39,22 @@
 					<div class="progress progress-success">
 						<div class="bar" style="width: <%= @progress %>;"></div>
 					</div>
-				</div>	
+				</div>
+				<div class="animal-profile-stats">
+					<dl>
+						<dt>Species:</dt>
+						<dd>Umbrella Cockatoo</dd>
+						<dt>Age:</dt>
+						<dd><%= @age %> years old</dd>
+					</dl>	
+				</div>
 				<div class="nonprofit-summary">
+					<p>Posted by:</p>
 					<h4>Miss Vicki's Parrot Village</h4>
 					<p>Fayetteville, GA</p>
+					<div class="nonprofit-icon pull-left">
+						<img src="assets/icons/miss-vicki.png" alt="Miss Vicki's Parrot Village" />
+					</div>	
 					<p>We are a 501 (c)(3) non-profit parrot rescue that is licensed by the Georgia Department of Agriculture. We rescue, rehabilitate, and re-home parrots of all sizes. We also offer assistance in the form of low-cost and no-cost boarding in the event of documented emergencies, and we provide sanctuary..</p>
 				</div>
 			</div>

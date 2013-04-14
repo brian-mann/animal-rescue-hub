@@ -63,20 +63,27 @@ li 								{  list-style: none; }
 	.animal-profile-content 	{  background-color: #fff; @include responsive-width(75%); padding: 20px 40px 60px; border-right: 1px solid #eee; float: left; position: relative;  }
 	.animal-profile-sidebar 	{  @include responsive-width(25%); padding: 20px 20px 60px;border-left: 1px solid #fff; float: left; background-color: #f6f6f6; position: absolute; top: 0; bottom: 0; right: 0;  }
 }
+.animal-profile-stats 			{  border-top: 1px solid #fff; border-bottom: 1px solid #ddd; padding-bottom: 30px; }
 .animal-profile-title 			{  padding-left: 60px; }
 .animal-profile-name 			{  font-family: 'Merienda', cursive; font-size: 24px; font-weight: bold; margin-top: 10px; }
 .animal-profile-location 		{  color: #838080; font-size: 14px; }
 .animal-profile-article 		{  clear: both; 
 	img 						{  float: left; padding-top: 10px; padding-right: 20px; padding-bottom: 20px; @include border-radius; }
 }
+
 .animal-profile-favorite 		{  margin-top: 4px; }
 .goal-progress 					{  font-size: 16px; font-weight: bold; color: #737272; 
 
 	.goal-money 				{  color: #478e31; font-size: 24px; }
 }
-.goal-area 						{  clear: both; overflow: auto; border-bottom: 1px solid #ddd; padding-bottom: 20px;  }
+.goal-area 						{  clear: both; overflow: auto; border-bottom: 1px solid #ddd; padding-bottom: 10px;  }
 .nonprofit-summary 				{  border-top: 1px solid #fff; 
-	h4 							{  margin-bottom: 0; margin-top: 10px; }
-	p 							{  margin-bottom: 0; font-size: 12px; }
+	h4 							{  margin-bottom: 0; margin-top: 10px; @include white-text-shadow; }
+	p 							{  margin-bottom: 0; font-size: 12px; @include white-text-shadow; 
+		&:first-child  			{  background-color: #ddd; padding-left: 4px; @include white-text-shadow; }
+	}
+}
+.nonprofit-icon 				{  margin-top: 5px; margin-right: 5px; margin-bottom: 5px; border: 1px solid #ddd; 
+	img 						{  height: 80px; width: 80px; }
 }
 .donate-button 					{  margin-bottom: 30px; @include responsive-width(100%); padding: 11px 19px; background-color: #d34d41; border: 1px solid #bd4237;  }
