@@ -19,6 +19,9 @@
 //= require lib/marionette
 //= require_tree ./vendor
 
+//= require twitter/bootstrap/dropdown
+//= require twitter/bootstrap/modal
+
 //= require_tree ./backbone/config
 //= require backbone/app
 //= require_tree ./backbone/entities
