@@ -80,9 +80,10 @@ li 								{  list-style: none; }
 .nonprofit-summary 				{  border-top: 1px solid #fff; 
 	h4 							{  margin-bottom: 0; margin-top: 10px; @include white-text-shadow; }
 	p 							{  margin-bottom: 0; font-size: 12px; @include white-text-shadow; 
-		&:first-child  			{  background-color: #ddd; padding-left: 4px; @include white-text-shadow; }
+		&:first-child  			{  background-color: #e3e3e3; padding-left: 4px; @include white-text-shadow; }
 	}
 }
+.photo-grid>div 				{  max-width: 180px; border: 1px solid #ddd; float: left; margin: 10px; }
 .nonprofit-icon 				{  margin-top: 5px; margin-right: 5px; margin-bottom: 5px; border: 1px solid #ddd; 
 	img 						{  height: 80px; width: 80px; }
 }

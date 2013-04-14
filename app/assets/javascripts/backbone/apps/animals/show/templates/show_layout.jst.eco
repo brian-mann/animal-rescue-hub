@@ -25,6 +25,36 @@
 					<h3><%= @name %>'s Story</h3>
 					<p><%- @story %>
 				</div>
+				<div class="photo-grid">
+					<h3>Photos</h3>
+					<div>
+						<img src="assets/sebastian/1.jpg" />
+					</div>
+					<div>
+						<img src="assets/sebastian/2.jpg" />
+					</div>
+					<div>	
+						<img src="assets/sebastian/3.jpg" />
+					</div>
+					<div>	
+						<img src="assets/sebastian/4.jpg" />
+					</div>
+					<div>	
+						<img src="assets/sebastian/5.jpg" />
+					</div>
+					<div>	
+						<img src="assets/sebastian/6.jpg" />
+					</div>
+					<div>	
+						<img src="assets/sebastian/7.jpg" />
+					</div>
+					<div>	
+						<img src="assets/sebastian/8.jpg" />
+					</div>
+					<div>	
+						<img src="assets/sebastian/9.jpg" />
+					</div>	
+				</div>
 							
 <!-- 				<%= @zip %> -->
 				
