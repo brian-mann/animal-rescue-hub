@@ -12,6 +12,9 @@
 					<i class="icons-twitter-32"></i>
 					<i class="icons-pinterest-32"></i>
 					<i class="icons-email-32"></i>
+					<div>
+						<a href="#"><i class="icons-star-full-no-shadow"></i>Add as Favorite</a>
+					</div>
 				</div>
 				<div class="animal-profile-article">
 					<img src="assets/images/profile/<%= @avatar %>" alt= "" />
