@@ -33,7 +33,7 @@
 			typesView = App.request "animal:types:list:view", types
 			
 			typesView.on "childview:animal:type:clicked", (iv, args) =>
-				animals.trigger "filter:on:animal:type:id", args.model.id
+				animals.trigger "filter:on:animal:type:id", args.model.get("name")
 			
 			@layout.animalTypesRegion.show typesView
 		

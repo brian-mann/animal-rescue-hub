@@ -9,7 +9,8 @@
 	class List.Animal extends App.Views.ItemView
 		template: "animals/list/_animal"
 		tagName: "li"
-		className: "item"
+		attributes: ->
+			class: "item #{@model.get("animal_type").name}"
 		
 		triggers:
 			"click" : "animal:clicked"
@@ -41,11 +42,17 @@
 		# 	window.foo = @collection
 		# 	window.bar = @
 		
-		filterByID: (animalTypeID) ->
-			items = @getChildrenItemsByAnimalTypeID animalTypeID
+		filterByID: (animalType) ->
 
+			# items = @getChildrenItemsByAnimalTypeID animalTypeID
+			
+			# console.log animalTypeID, items
+
+			# @$el.isotope
+			# 	filter: "*"
+			
 			@$el.isotope
-				filter: items
+				filter: ".item.#{animalType}"
 		
 		getChildrenItemsByAnimalTypeID: (id) ->
 			views = []
