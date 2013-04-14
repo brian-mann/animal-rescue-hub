@@ -18,9 +18,12 @@ li 								{  list-style: none; }
 .icons-star-full-no-shadow 			{  vertical-align: top ; margin-right: 3px; }
 .nav .dropdown-toggle .caret						{      border-bottom-color: #777;    border-top-color: #777; position: relative; top: 2px; }
 .dropdown-menu 					{  padding: 0; }
+.dropdown-toggle 				{  padding-right: 7px !important; padding-left: 7px !important; }
+.icon-filter, .icon-list 		{  @include opacity(0.4); }
 //-----------------------Secondary Nav-------------------------------//
 #secondary-nav .navbar-inner 	{  background-image: none; background-color: #eee; border-color: #ddd; 
-	.nav.pull-right 			{  padding-right: 20px; }
+	form 						{  padding-right: 30px; }
+	.nav.pull-right 			{  padding-right: 5px; }
 }
 .category-list  				{  padding-left: 20px;
 	&.nav>li 					{
