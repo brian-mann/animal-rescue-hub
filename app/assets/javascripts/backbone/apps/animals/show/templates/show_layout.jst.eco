@@ -18,7 +18,7 @@
 				</div>
 				<div class="animal-profile-article">
 					<div class="image-wrapper">
-						<a href="assets/profile/<%= @avatar %>" class="thumb">
+						<a href="assets/profile/<%= @avatar %>" class="thumb" rel="thumbnail">
 							<img src="assets/profile/<%= @avatar %>" />
 						</a>
 					</div>
@@ -27,37 +27,14 @@
 				</div>
 				<div class="photo-grid">
 					<h3>Photos</h3>
-					<div>
-						<img src="assets/sebastian/1.jpg" />
-					</div>
-					<div>
-						<img src="assets/sebastian/2.jpg" />
-					</div>
-					<div>	
-						<img src="assets/sebastian/3.jpg" />
-					</div>
-					<div>	
-						<img src="assets/sebastian/4.jpg" />
-					</div>
-					<div>	
-						<img src="assets/sebastian/5.jpg" />
-					</div>
-					<div>	
-						<img src="assets/sebastian/6.jpg" />
-					</div>
-					<div>	
-						<img src="assets/sebastian/7.jpg" />
-					</div>
-					<div>	
-						<img src="assets/sebastian/8.jpg" />
-					</div>
-					<div>	
-						<img src="assets/sebastian/9.jpg" />
-					</div>	
-				</div>
-							
-<!-- 				<%= @zip %> -->
-				
+					<% for num in [1..9]: %>
+						<div>
+							<a href="assets/sebastian/<%= num %>.jpg" class="thumb" rel="thumbnail">
+								<img src="assets/sebastian/<%= num %>.jpg" />
+							</a>
+						</div>
+					<% end %>
+				</div>				
 			</div>
 			<div class="animal-profile-sidebar">
 				<a class="btn btn-large btn-danger donate-button">Donate Now</a>
