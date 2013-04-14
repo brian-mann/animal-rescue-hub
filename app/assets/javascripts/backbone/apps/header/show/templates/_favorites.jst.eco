@@ -1,1 +1,1 @@
-<%= @items.length %> Favorites
+<i class="icons-star-full"></i><%= @items.length %> Favorites
