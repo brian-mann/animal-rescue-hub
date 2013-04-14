@@ -9,6 +9,7 @@
 				</a>
 			</li>
 		</ul>
+		<div id="favorites-region"></div>
 		<ul class="nav pull-right">
 			<li>
 				<a href="#">Sign Up</a>

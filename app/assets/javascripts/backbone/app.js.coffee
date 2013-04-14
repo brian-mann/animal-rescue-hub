@@ -4,9 +4,13 @@
 	
 	App.on "initialize:before", (options) ->
 		@animalTypes = App.request "animal:type:entities", options.animalTypes
+		@favoriteAnimals = App.request "favorite:animals"
 	
 	App.reqres.setHandler "app:animal:types", ->
 		App.animalTypes
+	
+	App.vent.on "favorite:animal:clicked", (animal) ->
+		App.favoriteAnimals.storeFavoriteAnimals animal
 	
 	App.rootRoute = Routes.animals_path()	
 	
@@ -15,7 +19,7 @@
 		mainRegion: 	"#main-region"
 	
 	App.addInitializer ->
-		App.module("HeaderApp").start()
+		App.module("HeaderApp").start favoriteAnimals: @favoriteAnimals
 	
 	App.on "initialize:after", (options) ->
 		@startHistory()

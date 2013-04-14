@@ -2,8 +2,8 @@
 	@startWithParent = false
 
 	API =
-		show: ->
-			HeaderApp.Show.Controller.show()
+		show: (favorites) ->
+			HeaderApp.Show.Controller.show favorites
 	
-	HeaderApp.on "start", ->
-		API.show()
+	HeaderApp.on "start", (options) ->
+		API.show options.favoriteAnimals

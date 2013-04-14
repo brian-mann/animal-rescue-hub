@@ -14,9 +14,6 @@
 					@animalTypesRegion animals, types
 					@animalsListRegion animals
 			
-				@layout.on "childview:animal:clicked", (iv, args) ->
-					App.vent.trigger "animal:clicked", args.model		
-			
 				App.mainRegion.show @layout
 		
 		animalsListRegion: (animals) ->			
@@ -24,6 +21,9 @@
 			
 			listView.on "childview:animal:clicked", (iv, args) ->
 				App.vent.trigger "animal:clicked", args.model
+			
+			listView.on "childview:favorite:animal:clicked", (iv, animal) ->
+				App.vent.trigger "favorite:animal:clicked", animal
 			
 			@layout.animalsListRegion.show listView
 		

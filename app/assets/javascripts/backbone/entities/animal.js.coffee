@@ -10,6 +10,10 @@
 		
 		getModelsByAnimalTypeID: (id) ->
 			@where animal_type_id: id
+		
+		storeFavoriteAnimals: (animal) ->
+			found = @get(animal.id)
+			if found then @remove(animal) else @add(animal)
 	
 	API =
 		getAnimals: ->
@@ -23,9 +27,15 @@
 				id: id
 			animal.fetch()
 			animal
+		
+		getFavoriteAnimals: ->
+			new Entities.AnimalsCollection
 	
 	App.reqres.setHandler "animal:entities", ->
 		API.getAnimals()
 	
 	App.reqres.setHandler "animal:entity", (id) ->
 		API.getAnimal id
+	
+	App.reqres.setHandler "favorite:animals", ->
+		API.getFavoriteAnimals()

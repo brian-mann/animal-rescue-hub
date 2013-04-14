@@ -13,10 +13,11 @@
 		triggers:
 			"click" : "animal:clicked"
 		events:
-			"click .favorite-animal" : "transferToFavorites"
+			"click .icons-star-empty" : "transferToFavorites"
 		
 		transferToFavorites: (e) ->
 			e.stopPropagation()
+			@trigger "favorite:animal:clicked", @model
 			@$el.effect "transfer",
 				to: $(".brand")
 			, 400

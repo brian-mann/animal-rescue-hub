@@ -2,9 +2,21 @@
 	
 	Show.Controller =
 		
-		show: ->
-			headerView = @getHeaderView()
-			App.headerRegion.show headerView
+		show: (favorites) ->
+			@layout = @getLayoutView()
+			
+			@layout.on "show", =>
+				@favoritesRegion favorites
+			
+			App.headerRegion.show @layout
 		
-		getHeaderView: ->
-			new Show.Header
+		favoritesRegion: (favorites) ->
+			favoritesView = @getFavoritesView favorites
+			@layout.favoritesRegion.show favoritesView
+		
+		getFavoritesView: (favorites) ->
+			new Show.Favorites
+				collection: favorites
+		
+		getLayoutView: ->
+			new Show.Layout
