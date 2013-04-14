@@ -12,6 +12,10 @@
 		
 		favoritesRegion: (favorites) ->
 			favoritesView = @getFavoritesView favorites
+			
+			favoritesView.on "favorite:animals:clicked", ->
+				App.vent.trigger "favorite:animals:clicked", favorites
+			
 			@layout.favoritesRegion.show favoritesView
 		
 		getFavoritesView: (favorites) ->

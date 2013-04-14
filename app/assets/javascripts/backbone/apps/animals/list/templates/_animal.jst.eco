@@ -2,7 +2,7 @@
 	<div class="animal-icon <%= @animal_type.name %>-bg"></div>
 	<div class="animal-location"><%= @city %>, <%= @state.abbr %></div>
 	<div class="image-wrapper">
-		<i class="icons-star-empty"></i>
+		<i class="icons-star-empty <%= "active" if @favorited %>"></i>
 		<img src="assets/preview/<%= @avatar %>" height="<%= @avatar_height %>" width="<%= @avatar_width %>" />
 	</div>
 	<span class="animal-name"><%= @name %></span>

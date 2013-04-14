@@ -10,17 +10,24 @@
 		template: "animals/list/_animal"
 		tagName: "li"
 		className: "item"
+		
 		triggers:
 			"click" : "animal:clicked"
+		
 		events:
 			"click .icons-star-empty" : "transferToFavorites"
+		
+		modelEvents:
+			"change:favorited" : "render"
 		
 		transferToFavorites: (e) ->
 			e.stopPropagation()
 			@trigger "favorite:animal:clicked", @model
-			@$el.effect "transfer",
-				to: $(".brand")
-			, 400
+			
+			if @model.get "favorited"
+				@$el.effect "transfer",
+					to: $("#favorites-region")
+				, 400
 	
 	class List.Animals extends App.Views.CollectionView
 		itemView: List.Animal

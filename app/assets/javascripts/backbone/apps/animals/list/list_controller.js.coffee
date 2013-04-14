@@ -2,8 +2,8 @@
 	
 	List.Controller =
 		
-		list: ->
-			animals = App.request "animal:entities"
+		list: (animals) ->
+			animals or= App.request "animal:entities"
 			types		= App.request "app:animal:types"
 			
 			App.execute "when:fetched", [animals, types], =>

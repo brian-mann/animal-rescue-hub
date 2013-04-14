@@ -9,6 +9,9 @@
 	App.reqres.setHandler "app:animal:types", ->
 		App.animalTypes
 	
+	App.reqres.setHandler "app:favorite:animals", ->
+		App.favoriteAnimals
+	
 	App.vent.on "favorite:animal:clicked", (animal) ->
 		App.favoriteAnimals.storeFavoriteAnimals animal
 	

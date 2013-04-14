@@ -9,6 +9,9 @@
 	class Show.Favorites extends App.Views.ItemView
 		template: "header/show/_favorites"
 		
+		triggers:
+			"click" : "favorite:animals:clicked"
+		
 		collectionEvents:
 			"add" 		: "render"
 			"remove" 	: "render"

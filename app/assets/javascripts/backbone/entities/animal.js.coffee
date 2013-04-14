@@ -1,6 +1,9 @@
 @Hub.module "Entities", (Entities, App, Backbone, Marionette, $, _) ->
 	
 	class Entities.Animal extends Entities.Model
+		defaults:
+			favorited: false
+			
 		urlRoot: -> Routes.animals_path()
 	
 	class Entities.AnimalsCollection extends Entities.Collection
@@ -13,7 +16,13 @@
 		
 		storeFavoriteAnimals: (animal) ->
 			found = @get(animal.id)
-			if found then @remove(animal) else @add(animal)
+			
+			if found
+				@remove(animal)
+				animal.set favorited: false
+			else 
+				@add(animal)
+				animal.set favorited: true
 	
 	API =
 		getAnimals: ->
