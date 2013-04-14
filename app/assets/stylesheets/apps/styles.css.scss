@@ -11,17 +11,22 @@ p 								{  line-height: 21px; }
 .navbar 						{  background: none; background-color: #fff; }
 .navbar-inner .nav.pull-right	{  padding-right: 40px;  }
 .navbar-inner 					{  @include box-shadow(rgba(black, .0) 0 0px 1px); @include box-shadow(rgba(black, .0) 0 0px 1px inset);}
-.brand 							{  color: $pastel-red; padding-left: 60px !important; font-family: 'Merienda', cursive; }
+.brand 							{  color: $pastel-red; padding-left: 60px !important; padding-top: 3px !important; padding-bottom: 2px !important; font-family: 'Merienda', cursive; 
+	img 						{  height: 40px; }
+}
 //-----------------------Secondary Nav-------------------------------//
-#secondary-nav .navbar-inner 	{  background-image: none; background-color: #eee; border-color: #ddd; }
-.category-list  				{  
+#secondary-nav .navbar-inner 	{  background-image: none; background-color: #eee; border-color: #ddd; 
+	.nav.pull-right 			{  padding-right: 20px; }
+}
+.category-list  				{  padding-left: 20px;
 	&.nav>li>a.btn 				{  padding: 2px 7px 3px; margin-right: 10px; line-height: 20px; height: 20px; border: 1px solid #ddd; 
 		&:hover, &.active, &:focus 		{  background-image: none; background-color: #e3e3e3; }
 		&.active 				{  font-weight: bold; }
 		i 						{  margin-right: 3px; }
 	}
 }
-#main-region 					{  margin-top: 40px; padding-left: 30px; padding-right: 20px;  }
+#main-region 					{  margin-top: 45px; }
+.layout-wrapper 				{  padding-left: 30px; padding-right: 20px; }
 .item 							{  overflow: auto; }
 li 								{  list-style: none; }
 .animal 						{  cursor: pointer; @include box-shadow(rgba(black, .1) 0 0px 3px); overflow: visible; width: 200px; margin: 10px; padding: 0 10px 10px; background-color: #fff; border: 1px solid #eee; @include border-radius(3px); 
