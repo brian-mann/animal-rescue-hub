@@ -59,9 +59,9 @@ li 								{  list-style: none; }
 
 	.goal-money 				{  color: #478e31; font-size: 24px; }
 }
-.goal-area 						{  overflow: auto; border-bottom: 1px solid #ddd; }
+.goal-area 						{  clear: both; overflow: auto; border-bottom: 1px solid #ddd; padding-bottom: 20px;  }
 .nonprofit-summary 				{  border-top: 1px solid #fff; 
 	h4 							{  margin-bottom: 0; margin-top: 10px; }
 	p 							{  margin-bottom: 0; font-size: 12px; }
 }
-.donate-button 					{  margin-bottom: 40px; @include responsive-width(100%); padding: 11px 19px; background-color: #d34d41; border: 1px solid #bd4237;  }
+.donate-button 					{  margin-bottom: 30px; @include responsive-width(100%); padding: 11px 19px; background-color: #d34d41; border: 1px solid #bd4237;  }
