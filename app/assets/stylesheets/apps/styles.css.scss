@@ -1,8 +1,8 @@
 [class^="icons-"]				{  display: inline-block; vertical-align: text-top; background-repeat: no-repeat;  }	
 html 							{  color: #444; background-color: #eee; }
 body 							{  background-color: #f4f4f4; }
-h1 								{  clear: both; text-align: center; font-family: 'Merienda', cursive; color: #585655; font-size: 26px; padding-top: 20px; margin-bottom: 0;  }
-h2 								{  text-align: center; color: #c1c1c0; font-size: 16px; line-height: 24px; margin-top: 0; margin-bottom: 30px; }
+h1 								{  @include white-text-shadow; clear: both; text-align: center; font-family: 'Merienda', cursive; color: #585655; font-size: 26px; padding-top: 20px; margin-bottom: 0;  }
+h2 								{  @include white-text-shadow; text-align: center; color: #c1c1c0; font-size: 16px; line-height: 24px; margin-top: 0; margin-bottom: 30px; }
 h3 								{  margin-bottom: 5px; }
 img 							{  font-size: 0; }
 p 								{  line-height: 21px; }
@@ -19,10 +19,15 @@ p 								{  line-height: 21px; }
 .item 							{  overflow: auto; }
 li 								{  list-style: none; }
 .animal 						{  cursor: pointer; @include box-shadow(rgba(black, .1) 0 0px 3px); overflow: visible; width: 200px; margin: 10px; padding: 0 10px 10px; background-color: #fff; border: 1px solid #eee; @include border-radius(3px); 
-	.image-wrapper 				{  position: relative; z-index: 1; margin-bottom: 10px; }
+	.image-wrapper 				{  position: relative; z-index: 1; margin-bottom: 10px; 
+		i 						{  position: absolute; right: 5px; top: 5px; z-index: 10; 
+			&:hover, &.active 	{  background: image-url("icons/star-full.png") no-repeat; @include single-transition(background, 300ms, ease, 0s);}
+
+		}
+	}
 	.image-link					{  
 		&:after 				{  bottom: 0; content: ""; height: 1px; left: 0; margin-top: -1px; position: absolute; right: 0; z-index: 10;}
-		img						{  min-width: 100%;  max-width: 100%; max-height: 100%; }
+		img						{  min-width: 100%;  max-width: 100%; max-height: 100%;	}
 	}
 	.progress 					{  margin-top: 3px; height: 14px; margin-bottom: 0; }
 }

@@ -16,3 +16,6 @@ $icons-clean-up: true;
 	border-style: solid;	
 	float: left;
 }
+
+
+@mixin white-text-shadow 			{  @include single-text-shadow($white, 0px, 1px, 0px);  }
