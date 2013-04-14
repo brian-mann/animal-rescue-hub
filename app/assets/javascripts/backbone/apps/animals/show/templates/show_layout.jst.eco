@@ -8,11 +8,12 @@
 				<div class="animal-profile-age"><%= @age %></div>
 			</div>
 			<div class="profile-sharing pull-right">
-				
+				<i class="icons-facebook-32"></i>
+				<i class="icons-twitter-32"></i>
+				<i class="icons-pinterest-32"></i>
+				<i class="icons-email-32"></i>
 			</div>
-			<%= @avatar %>
-			
-			
+			<%= @avatar %>			
 			<%= @zip %>
 		</div>
 		<div class="animal-profile-sidebar">

@@ -1,6 +1,6 @@
 <div class="navbar navbar-fixed-top">
 	<div class="navbar-inner">
-		<a class="brand">Fur & Feathers Fund</a>
+		<a href="/" class="brand">Fur & Feathers Fund</a>
 		<ul class="nav">
 			<li>
 				<a href="#" class="dropdown-toggle" data-toggle="dropdown">
