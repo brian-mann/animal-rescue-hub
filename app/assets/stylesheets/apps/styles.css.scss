@@ -56,10 +56,11 @@ li 								{  list-style: none; }
 }
 .dropdown-link 					{  }
 .animal-profile-wrapper			{  @include border-radius; padding: 20px 0;}
-.animal-profile 				{  @include box-shadow(rgba(black, .2) 0 0px 1px); @include border-radius; background-color: #fff; margin: 20px; border: 1px solid #eee; overflow: auto;  
+.animal-profile 				{  @include box-shadow(rgba(black, .2) 0 0px 1px); @include border-radius; background-color: #fff; margin: 20px; border: 1px solid #eee; overflow: auto; position: relative; 
+	.image-wrapper				{  max-width: 300px; max-height: 300px;  }
 	.animal-icon 				{  top: 20px; left: 42px; }
 	.animal-profile-content 	{  background-color: #fff; @include responsive-width(75%); padding: 20px 40px 60px; border-right: 1px solid #eee; float: left; position: relative;  }
-	.animal-profile-sidebar 	{  @include responsive-width(25%); padding: 20px 40px 60px;border-left: 1px solid #fff; float: left; background-color: #f6f6f6;  }
+	.animal-profile-sidebar 	{  @include responsive-width(25%); padding: 20px 20px 60px;border-left: 1px solid #fff; float: left; background-color: #f6f6f6; position: absolute; top: 0; bottom: 0; right: 0;  }
 }
 .animal-profile-title 			{  padding-left: 60px; }
 .animal-profile-name 			{  font-family: 'Merienda', cursive; font-size: 24px; font-weight: bold; margin-top: 10px; }
