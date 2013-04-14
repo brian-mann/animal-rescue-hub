@@ -64,7 +64,7 @@
 				<div class="goal-area">
 					<div class="goal-progress">
 						<span class="goal-money">$<%= @goal_progress %></span> of 
-						<span class="goal-money"><%= @goal_amount %></span> met
+						<span class="goal-money">$<%= @goal_amount %></span> met
 					</div>
 					<div class="progress progress-success">
 						<div class="bar" style="width: <%= @progress %>;"></div>
