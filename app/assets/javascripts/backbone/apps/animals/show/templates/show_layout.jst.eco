@@ -5,7 +5,6 @@
 			<div class="animal-profile-title pull-left">
 				<div class="animal-profile-name"><%= @name %></div>
 				<div class="animal-profile-location"><%= @city %>, <%= @state.abbr %></div>
-				<div class="animal-profile-age"><%= @age %></div>
 			</div>
 			<div class="profile-sharing pull-right">
 				<i class="icons-facebook-32"></i>
@@ -13,11 +12,30 @@
 				<i class="icons-pinterest-32"></i>
 				<i class="icons-email-32"></i>
 			</div>
+			<div class="animal-profile-article">
+				<img src="http://placehold.it/300x350">
+				<h3><%= @name %>'s Story</h3>
+				<p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Nulla vitae elit libero, a pharetra augue. Donec sed odio dui. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</p>
+
+<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+
+<p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Aenean lacinia bibendum nulla sed consectetur. Vestibulum id ligula porta felis euismod semper. Sed posuere consectetur est at lobortis. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+
+<p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean lacinia bibendum nulla sed consectetur. Donec ullamcorper nulla non metus auctor fringilla. Donec id elit non mi porta gravida at eget metus. Curabitur blandit tempus porttitor.</p>
+
+<p>Aenean lacinia bibendum nulla sed consectetur. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam quis risus eget urna mollis ornare vel eu leo.</p>
+
+<p>Maecenas faucibus mollis interdum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod.</p>
+			</div>
 			<%= @avatar %>			
 			<%= @zip %>
+			<%= @age %>
 		</div>
 		<div class="animal-profile-sidebar">
-			<%= @goal_amount %>
+			<div class="goal-progress">
+				<span class="goal-money">$0</span> of 
+				<span class="goal-money"><%= @goal_amount %></span> met
+			</div>
 			<div class="progress progress-success">
 				<div class="bar" style="width: 60%;"></div>
 			</div>

@@ -3,7 +3,10 @@ html 							{  color: #444; background-color: #eee; }
 body 							{  background-color: #f4f4f4; }
 h1 								{  clear: both; text-align: center; font-family: 'Merienda', cursive; color: #585655; font-size: 26px; padding-top: 20px; margin-bottom: 0;  }
 h2 								{  text-align: center; color: #c1c1c0; font-size: 16px; line-height: 24px; margin-top: 0; margin-bottom: 30px; }
+h3 								{  margin-bottom: 5px; }
 img 							{  font-size: 0; }
+p 								{  line-height: 21px; }
+.progress 						{  background-image: none; border: 1px solid #ddd; background-color: #fff; }
 .navbar 						{  background: none; background-color: #fff; }
 .navbar-inner .nav.pull-right		{  padding-right: 40px;  }
 .brand 							{  color: $pastel-red; padding-left: 60px !important; font-family: 'Merienda', cursive; }
@@ -15,7 +18,7 @@ img 							{  font-size: 0; }
 #main-region 					{  margin-top: 40px; padding-left: 30px; padding-right: 20px;  }
 .item 							{  overflow: auto; }
 li 								{  list-style: none; }
-.animal 						{  @include box-shadow(rgba(black, .1) 0 0px 3px); overflow: visible; width: 200px; margin: 10px; padding: 0 10px 10px; background-color: #fff; border: 1px solid #eee; @include border-radius(3px); 
+.animal 						{  cursor: pointer; @include box-shadow(rgba(black, .1) 0 0px 3px); overflow: visible; width: 200px; margin: 10px; padding: 0 10px 10px; background-color: #fff; border: 1px solid #eee; @include border-radius(3px); 
 	.image-wrapper 				{  position: relative; z-index: 1; margin-bottom: 10px; }
 	.image-link					{  
 		&:after 				{  bottom: 0; content: ""; height: 1px; left: 0; margin-top: -1px; position: absolute; right: 0; z-index: 10;}
@@ -35,11 +38,17 @@ li 								{  list-style: none; }
 }
 .dropdown-link 					{  }
 .animal-profile-wrapper			{  @include border-radius; padding: 20px 0;}
-.animal-profile 				{  background-color: #fff; margin: 20px; border: 1px solid #eee; overflow: auto;  
-	.animal-icon 				{  top: 20px; left: 20px; }
-	.animal-profile-content 	{  background-color: #fff; @include responsive-width(75%); padding: 20px; border-right: 1px solid #eee; float: left; position: relative;  }
-	.animal-profile-sidebar 	{  @include responsive-width(25%); padding: 20px; border-left: 1px solid #fff; float: left; background-color: #f6f6f6;  }
+.animal-profile 				{  @include box-shadow(rgba(black, .2) 0 0px 1px); @include border-radius; background-color: #fff; margin: 20px; border: 1px solid #eee; overflow: auto;  
+	.animal-icon 				{  top: 20px; left: 42px; }
+	.animal-profile-content 	{  background-color: #fff; @include responsive-width(75%); padding: 20px 40px 60px; border-right: 1px solid #eee; float: left; position: relative;  }
+	.animal-profile-sidebar 	{  @include responsive-width(25%); padding: 20px 40px 60px;border-left: 1px solid #fff; float: left; background-color: #f6f6f6;  }
 }
 .animal-profile-title 			{  padding-left: 60px; }
 .animal-profile-name 			{  font-family: 'Merienda', cursive; font-size: 24px; font-weight: bold; margin-top: 10px; }
 .animal-profile-location 		{  color: #838080; font-size: 14px; }
+.animal-profile-article 		{  clear: both; 
+	img 						{  float: left; padding-top: 10px; padding-right: 20px; padding-bottom: 20px; @include border-radius; }
+}
+.goal-progress 					{  font-size: 16px; font-weight: bold; color: #737272; 
+	.goal-money 				{  color: #478e31; font-size: 24px; }
+}
