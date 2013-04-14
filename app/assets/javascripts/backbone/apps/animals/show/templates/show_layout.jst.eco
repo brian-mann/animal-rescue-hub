@@ -17,7 +17,9 @@
 					</div>
 				</div>
 				<div class="animal-profile-article">
-					<img src="assets/profile/<%= @avatar %>" />
+					<a href="assets/profile/<%= @avatar %>" class="thumb">
+						<img src="assets/profile/<%= @avatar %>" />
+					</a>
 					<h3><%= @name %>'s Story</h3>
 					<p><%- @story %>
 				</div>
