@@ -2,10 +2,13 @@
 	<div class="animal-profile">
 		<div class="animal-profile-content">
 			<div class="animal-icon <%= @animal_type.name %>-bg"></div>
-			<div class="animal-profile-title">
+			<div class="animal-profile-title pull-left">
 				<div class="animal-profile-name"><%= @name %></div>
 				<div class="animal-profile-location"><%= @city %>, <%= @state.abbr %></div>
 				<div class="animal-profile-age"><%= @age %></div>
+			</div>
+			<div class="profile-sharing pull-right">
+				
 			</div>
 			<%= @avatar %>
 			
