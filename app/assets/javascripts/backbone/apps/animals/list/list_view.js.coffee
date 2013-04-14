@@ -39,6 +39,9 @@
 
 			_.pluck views, "el"
 		
+		# onBeforeRender: ->
+			# @el.isotope()
+		
 		onShow: ->
 			children = @$el.children()
 			children.hide()
