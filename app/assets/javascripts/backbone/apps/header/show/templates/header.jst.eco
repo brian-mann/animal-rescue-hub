@@ -1,10 +1,15 @@
 <div class="navbar navbar-fixed-top">
 	<div class="navbar-inner">
 		<a href="/" class="brand">Fur & Feathers Fund</a>
-		<ul class="nav pull-right">
+		<ul class="nav">
 			<li>
-				<a href="#" id="favorites-region"></a>
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+					Browse Animals
+					<b class="caret"></b>
+				</a>
 			</li>
+		</ul>
+		<ul class="nav pull-right">
 			<li>
 				<a href="#">Sign Up</a>
 			</li>

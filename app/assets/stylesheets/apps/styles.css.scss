@@ -9,7 +9,8 @@ img 							{  font-size: 0; }
 p 								{  line-height: 21px; }
 .progress 						{  background-image: none; border: 1px solid #ddd; background-color: #fff; }
 .navbar 						{  background: none; background-color: #fff; }
-.navbar-inner .nav.pull-right		{  padding-right: 40px;  }
+.navbar-inner .nav.pull-right	{  padding-right: 40px;  }
+.secondary-nav 					{  background-color: #e4e4e4; border-bottom: #ddd;   }
 .brand 							{  color: $pastel-red; padding-left: 60px !important; font-family: 'Merienda', cursive; }
 .category-list  				{  overflow: auto; 
 	&>li 						{  float: left; 
