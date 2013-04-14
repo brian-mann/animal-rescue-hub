@@ -5,6 +5,10 @@
 		tagName: "li"
 		triggers:
 			"click" : "animal:type:clicked"
+		modelEvents:
+			"change:picked" : "render"
+		onBeforeRender: ->
+			@$el.toggleClass "active", @model.get("picked")
 			
 	class List.AnimalTypes extends App.Views.CompositeView
 		template: "animal_types/list/types"

@@ -1,6 +1,8 @@
 @Hub.module "Entities", (Entities, App, Backbone, Marionette, $, _) ->
 	
 	class Entities.AnimalType extends Entities.Model
+		defaults:
+			picked: false
 	
 	class Entities.AnimalTypesCollection extends Entities.Collection
 		model: Entities.AnimalType
