@@ -16,6 +16,7 @@ p 								{  line-height: 21px; }
 }
 .icons-star-full-no-shadow 			{  vertical-align: top ; margin-right: 3px; }
 .nav .dropdown-toggle .caret						{      border-bottom-color: #777;    border-top-color: #777; position: relative; top: 2px; }
+.dropdown-menu 					{  padding: 0; }
 //-----------------------Secondary Nav-------------------------------//
 #secondary-nav .navbar-inner 	{  background-image: none; background-color: #eee; border-color: #ddd; 
 	.nav.pull-right 			{  padding-right: 20px; }
@@ -68,6 +69,7 @@ li 								{  list-style: none; }
 .animal-profile-article 		{  clear: both; 
 	img 						{  float: left; padding-top: 10px; padding-right: 20px; padding-bottom: 20px; @include border-radius; }
 }
+.animal-profile-favorite 		{  margin-top: 4px; }
 .goal-progress 					{  font-size: 16px; font-weight: bold; color: #737272; 
 
 	.goal-money 				{  color: #478e31; font-size: 24px; }

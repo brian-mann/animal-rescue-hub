@@ -12,7 +12,7 @@
 					<i class="icons-twitter-32"></i>
 					<i class="icons-pinterest-32"></i>
 					<i class="icons-email-32"></i>
-					<div>
+					<div class="animal-profile-favorite">
 						<a href="#"><i class="icons-star-full-no-shadow"></i>Add as Favorite</a>
 					</div>
 				</div>
@@ -33,11 +33,11 @@
 				<a class="btn btn-large btn-danger donate-button">Donate Now</a>
 				<div class="goal-area">
 					<div class="goal-progress">
-						<span class="goal-money">$0</span> of 
+						<span class="goal-money">$1300</span> of 
 						<span class="goal-money"><%= @goal_amount %></span> met
 					</div>
 					<div class="progress progress-success">
-						<div class="bar" style="width: 60%;"></div>
+						<div class="bar" style="width: 100%;"></div>
 					</div>
 				</div>	
 				<div class="nonprofit-summary">
