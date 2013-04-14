@@ -15,6 +15,7 @@ p 								{  line-height: 21px; }
 	img 						{  height: 40px; }
 }
 .icons-star-full-no-shadow 			{  vertical-align: top ; margin-right: 3px; }
+.nav .dropdown-toggle .caret						{      border-bottom-color: #777;    border-top-color: #777; position: relative; top: 2px; }
 //-----------------------Secondary Nav-------------------------------//
 #secondary-nav .navbar-inner 	{  background-image: none; background-color: #eee; border-color: #ddd; 
 	.nav.pull-right 			{  padding-right: 20px; }
@@ -33,7 +34,7 @@ li 								{  list-style: none; }
 .animal 						{  cursor: pointer; @include box-shadow(rgba(black, .1) 0 0px 3px); overflow: visible; width: 200px; margin: 10px; padding: 0 10px 10px; background-color: #fff; border: 1px solid #eee; @include border-radius(3px); 
 	.image-wrapper 				{  position: relative; z-index: 1; margin-bottom: 10px; 
 		i 						{  position: absolute; right: 5px; top: 5px; z-index: 10; 
-			&:hover, &.active 	{  background: image-url("icons/star-full.png") no-repeat; @include single-transition(background, 300ms, ease, 0s);}
+			&:hover, &.active 	{  background: image-url("icons/star-full.png") no-repeat;}
 
 		}
 	}
