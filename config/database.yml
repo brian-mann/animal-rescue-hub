@@ -7,13 +7,13 @@ development:
   username: root
   password:
 
-  development:
-    adapter: mysql2  
-    encoding: utf8
-    database: animal-rescue-hub-development
-    pool: 5
-    username: root
-    password:
+test:
+  adapter: mysql2  
+  encoding: utf8
+  database: animal-rescue-hub-development
+  pool: 5
+  username: root
+  password:
 
 # production:
 #   adapter: mysql2  
