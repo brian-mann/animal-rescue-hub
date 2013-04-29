@@ -5,9 +5,12 @@ AnimalRescueHub::Application.routes.draw do
 
 	resources :animals, :only => [:index, :show]
 
-  match "privacy_policy" => 'animals#privacy_policy'
-
   root :to => 'application#index'
+
+  match "privacy_policy"  => 'pages#privacy_policy'
+  match "signup"          => 'pages#signup'
+
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

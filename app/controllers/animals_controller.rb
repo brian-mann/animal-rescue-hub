@@ -9,7 +9,4 @@ class AnimalsController < ApplicationController
 		@animal = Animal.find params[:id]
 	end
 
-	def privacy_policy
-		render "pages/privacy_policy"
-	end
 end
