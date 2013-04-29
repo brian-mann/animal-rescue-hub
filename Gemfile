@@ -12,7 +12,6 @@ group :assets do
 end
 
 gem 'jquery-rails'
-gem 'jquery-ui-rails'
 gem 'mysql2'
 gem 'activeadmin'
 
@@ -21,7 +20,7 @@ gem "rabl"
 # gem "oj"
 gem "gon"
 gem "js-routes"
-
+gem 'jquery-ui-rails', github: "inspectall/jquery-ui-rails"
 gem "rmagick"
 
 group :development, :test do
