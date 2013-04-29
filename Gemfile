@@ -25,5 +25,10 @@ gem "js-routes"
 gem "rmagick"
 
 group :development, :test do
+	gem 'rspec-rails'
 	gem "forgery"
+end
+
+group :test do
+  gem 'capybara'  
 end
