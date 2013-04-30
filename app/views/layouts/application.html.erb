@@ -4,7 +4,7 @@
 		<%= content_tag :title, title_head %>
 		<meta name="description" content="<%= meta_description %>" />
 		<%= include_gon %>
-	  	<%= stylesheet_link_tag    "application", :media => "all" %>
+	  	<%= stylesheet_link_tag "application", :media => "all" %>
 	  	<%= stylesheet_link_tag "http://fonts.googleapis.com/css?family=Raleway:600|Kotta+One" %>
 	  	<%= javascript_include_tag "application" %>
 	  	<%= csrf_meta_tags %>
@@ -12,5 +12,6 @@
 	<body>
 		<%= yield %>
 		<%= render "layouts/footer" %>
+		<%= debug(params) if Rails.env.development? %>
 	</body>
 </html>
