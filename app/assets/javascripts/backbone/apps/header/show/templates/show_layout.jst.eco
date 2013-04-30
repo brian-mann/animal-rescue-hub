@@ -1,6 +1,6 @@
 <div id="primary-nav" class="navbar navbar-fixed-top">
 	<div class="navbar-inner">
-		<a href="#animals" class="brand">
+		<a href="/" class="brand">
 			<img src="assets/bg-images/logo.png" />
 			<span>Rescue Funder</span>
 		</a>
@@ -26,7 +26,7 @@
 				<a href="#" id="favorites-region"></a>
 			</li>
 			<li>
-				<a href="#">Sign Up</a>
+				<a href="signup">Sign Up</a>
 			</li>
 			<li>
 				<a href="#">Sign In</a>
