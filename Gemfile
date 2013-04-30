@@ -10,6 +10,7 @@ group :assets do
   gem "compass-rails"
   gem "bootstrap-sass-rails"
   gem 'bcrypt-ruby'
+  gem 'simple_form'
 end
 
 gem 'jquery-rails'

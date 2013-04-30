@@ -1,1 +1,9 @@
 <h1>Sign Up</h1>
+<%= simple_form_for @user do |f| %>
+  <%= f.input :first_name, label: 'Your username please' %>
+  <%= f.input :last_name, label: 'Your username please' %>
+  <%= f.input :email, placeholder: 'user@domain.com' %>
+  <%= f.input :password, hint: 'No special characters.' %>
+  <%= f.input :password_confirmation, hint: 'No special characters.' %>
+  <%= f.button :submit %>
+<% end %>
