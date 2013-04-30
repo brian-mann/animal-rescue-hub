@@ -9,6 +9,7 @@ group :assets do
   gem "eco"
   gem "compass-rails"
   gem "bootstrap-sass-rails"
+  gem 'bcrypt-ruby'
 end
 
 gem 'jquery-rails'
@@ -27,6 +28,7 @@ gem "rmagick"
 group :development, :test do
 	gem 'rspec-rails'
 	gem "forgery"
+	gem 'annotate'
 end
 
 group :test do
