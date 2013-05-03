@@ -30,6 +30,9 @@ group :development, :test do
 	gem 'rspec-rails'
 	gem "forgery"
 	gem 'annotate'
+  gem 'rb-readline'
+  gem 'guard-rspec'
+  gem 'rb-fsevent'
 end
 
 group :test do
