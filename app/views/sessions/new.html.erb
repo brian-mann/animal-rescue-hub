@@ -1,1 +1,10 @@
 <h1>Sign In</h1>
+<% flash.each do |key, value| %>
+  <div class="alert alert-<%= key %>"><%= value %></div>
+<% end %>
+<%= simple_form_for(:session, url: signin_path) do |f| %>
+  <%= f.input :email %>
+  <%= f.input :password %>
+  <%= f.button :submit, id: "sign_in", value: "Sign In", class: 'btn-info pull-right' %>
+  <p>New user? <%= link_to "Sign up now!", signup_path %></p>
+<% end %>
