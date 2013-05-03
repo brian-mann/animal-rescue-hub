@@ -11,9 +11,9 @@ AnimalRescueHub::Application.routes.draw do
 
   match "/privacy_policy"  => 'pages#privacy_policy'
   match "/signup"          => 'users#new'
-  match '/signin',  to: 'sessions#new'
+  match '/signin'          => 'sessions#new'
   #the use of via: :delete for the signout route, which indicates that it should be invoked using an HTTP DELETE request
-  match '/signout', to: 'sessions#destroy', via: :delete
+  match '/signout'         => 'sessions#destroy', via: :delete
 
 end
 
