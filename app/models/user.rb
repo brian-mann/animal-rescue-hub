@@ -15,7 +15,6 @@ class User < ActiveRecord::Base
 		self.first_name.titleize + " " + self.last_name.titleize
 	end
 
-
 end
 
 
