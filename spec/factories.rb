@@ -5,5 +5,6 @@ FactoryGirl.define do
 		email	 "jasonsmith@example.com"
 		password	"foobar1"
 		password_confirmation	"foobar1"
+		accept_terms	true
 	end
 end

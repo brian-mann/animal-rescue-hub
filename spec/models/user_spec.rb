@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe User do
   
-	before { @user = User.new(first_name: "Example", last_name: "User", email: "user@example.com", password: "foobar", password_confirmation: "foobar") }
+	before { @user = User.new(first_name: "Example", last_name: "User", email: "user@example.com", password: "foobar", password_confirmation: "foobar", accept_terms: true) }
 
 	subject { @user }
 
@@ -13,6 +13,7 @@ describe User do
 	it { should respond_to(:password) }
 	it { should respond_to(:password_confirmation) }
 	it { should respond_to(:authenticate) }
+	it { should respond_to(:accept_terms) }
 
 	# Verifying that the entire User model is valid----------------------------------------------------------
 	it { should be_valid }
@@ -35,6 +36,11 @@ describe User do
 
 	describe "when Password is not present" do
 		before 	{ @user.password = @user.password_confirmation = " " }
+		it 			{ should_not be_valid }
+	end
+
+	describe "when Accepts Terms is not true" do
+		before 	{ @user.accept_terms = false }
 		it 			{ should_not be_valid }
 	end
 
