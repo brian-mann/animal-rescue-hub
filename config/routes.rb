@@ -9,7 +9,7 @@ AnimalRescueHub::Application.routes.draw do
   root :to => 'application#index'
 
   match "privacy_policy"  => 'pages#privacy_policy'
-  match "signup"          => 'pages#signup'
+  match "signup"          => 'users#new'
 
 end
 
