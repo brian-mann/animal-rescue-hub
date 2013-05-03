@@ -11,6 +11,10 @@ class User < ActiveRecord::Base
   validates :password, length: { minimum: 6 }
 	validates_acceptance_of :accept_terms, :accept => true, :message => "You must accept the Terms of Serveice & Privacy Policy to continue."
 
+	def full_name
+		self.first_name.titleize + " " + self.last_name.titleize
+	end
+
 
 end
 
