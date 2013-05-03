@@ -1,0 +1,9 @@
+/* forms */
+.form-wrapper 								{  background-color: #fff; @include border-radius; padding: 30px 60px; overflow: auto;  
+	form 									{  overflow: auto; }
+}
+input, textarea, select, .uneditable-input 	{  border: 1px solid #bbb; width: 100%; padding: 10px; @include box_sizing(border-box);}
+input 										{  height: 32px !important; margin-bottom: 0 !important; }
+label 										{  margin-top: 10px; font-weight: bold; color: #444; font-size: 15px;  }
+.help-block 								{  color: #999; font-size: 13px; }
+.required>abbr 								{  color: $blue; border-bottom: 0; }

@@ -9,6 +9,8 @@ group :assets do
   gem "eco"
   gem "compass-rails"
   gem "bootstrap-sass-rails"
+  gem 'bcrypt-ruby'
+  gem 'simple_form'
 end
 
 gem 'jquery-rails'
@@ -24,5 +26,15 @@ gem 'jquery-ui-rails', github: "inspectall/jquery-ui-rails"
 gem "rmagick"
 
 group :development, :test do
+	gem 'rspec-rails'
 	gem "forgery"
+	gem 'annotate'
+  gem 'rb-readline'
+  gem 'guard-rspec'
+  gem 'rb-fsevent'
+end
+
+group :test do
+  gem 'capybara'
+  gem 'factory_girl_rails'
 end

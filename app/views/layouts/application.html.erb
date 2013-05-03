@@ -1,14 +1,22 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Rescue Funder</title>
+		<%= content_tag :title, title_head %>
+		<meta name="description" content="<%= meta_description %>" />
 		<%= include_gon %>
-	  	<%= stylesheet_link_tag    "application", :media => "all" %>
+	  	<%= stylesheet_link_tag "application", :media => "all" %>
+	  	<%= stylesheet_link_tag "http://fonts.googleapis.com/css?family=Raleway:600|Kotta+One" %>
 	  	<%= javascript_include_tag "application" %>
 	  	<%= csrf_meta_tags %>
-	  	<%= stylesheet_link_tag "http://fonts.googleapis.com/css?family=Merienda:400,700" %>
 	</head>
 	<body>
-		<%= yield %>
+		<div class="container">
+			<% flash.each do |key, value| %>
+			  <div class="alert alert-<%= key %>"><%= value %></div>
+			<% end %>
+			<%= yield %>
+		</div>
+		<%= render "layouts/footer" %>
+		<%= debug(params) if Rails.env.development? %>
 	</body>
 </html>

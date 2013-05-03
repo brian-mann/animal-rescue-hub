@@ -5,10 +5,12 @@
 		<i class="icons-star-empty <%= "active" if @favorited %>"></i>
 		<img src="assets/preview/<%= @avatar %>" />
 	</div>
-	<span class="animal-name"><%= @name %></span>
-	<span class="animal-goal pull-right">$<%= @goal_amount %></span>
-	<div class="progress progress-success favorite-animal">
-		<div class="bar" style="width: <%= @progress %>;"></div>
+	<div class="animal-details">
+		<span class="animal-name"><%= @name %></span>
+		<span class="animal-goal pull-right">$<%= @goal_amount %></span>
+		<div class="progress progress-success favorite-animal">
+			<div class="bar" style="width: <%= @progress %>;"></div>
+		</div>
 	</div>
 </div>
 

@@ -1,14 +1,32 @@
-<div class="navbar navbar-fixed-top">
+<div id="primary-nav" class="navbar navbar-fixed-top">
 	<div class="navbar-inner">
-		<a href="#animals" class="brand">
+		<a href="/" class="brand">
 			<img src="assets/bg-images/logo.png" />
+			<span>Rescue Funder</span>
 		</a>
+		<ul class="nav">
+			<li class="divider-vertical"></li>
+			<li>
+				<a href="#animals">
+					Browse
+					<span>Rescued Animals</span>
+				</a>
+			</li>
+			<li class="divider-vertical"></li>
+			<li>
+				<a href="#">
+					Post
+					<span>An Animal</span>
+				</a>
+			</li>
+			<li class="divider-vertical"></li>
+		</ul>
 		<ul class="nav pull-right">
 			<li>
 				<a href="#" id="favorites-region"></a>
 			</li>
 			<li>
-				<a href="#">Sign Up</a>
+				<a href="signup">Sign Up</a>
 			</li>
 			<li>
 				<a href="#">Sign In</a>
