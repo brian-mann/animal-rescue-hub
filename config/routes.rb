@@ -5,16 +5,20 @@ AnimalRescueHub::Application.routes.draw do
 
 	resources :animals, :only => [:index, :show]
   resources :users
+  resources :users, :only => [:new, :create, :destroy]
 
   root :to => 'application#index'
 
-  match "privacy_policy"  => 'pages#privacy_policy'
-  match "signup"          => 'users#new'
+  match "/privacy_policy"  => 'pages#privacy_policy'
+  match "/signup"          => 'users#new'
+  match '/signin',  to: 'sessions#new'
+  #the use of via: :delete for the signout route, which indicates that it should be invoked using an HTTP DELETE request
+  match '/signout', to: 'sessions#destroy', via: :delete
 
 end
 
 #== Route Map
-# Generated on 30 Apr 2013 12:55
+# Generated on 03 May 2013 12:54
 #
 # batch_action_admin_admin_users POST       /admin/admin_users/batch_action(.:format) admin/admin_users#batch_action
 #              admin_admin_users GET        /admin/admin_users(.:format)              admin/admin_users#index
@@ -53,6 +57,11 @@ end
 #                           user GET        /users/:id(.:format)                      users#show
 #                                PUT        /users/:id(.:format)                      users#update
 #                                DELETE     /users/:id(.:format)                      users#destroy
+#                                POST       /users(.:format)                          users#create
+#                                GET        /users/new(.:format)                      users#new
+#                                DELETE     /users/:id(.:format)                      users#destroy
 #                           root            /                                         application#index
 #                 privacy_policy            /privacy_policy(.:format)                 pages#privacy_policy
-#                         signup            /signup(.:format)                         pages#signup
+#                         signup            /signup(.:format)                         users#new
+#                         signin            /signin(.:format)                         sessions#new
+#                        signout DELETE     /signout(.:format)                        sessions#destroy
