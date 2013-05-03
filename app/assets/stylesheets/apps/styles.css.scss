@@ -19,12 +19,12 @@ li 								{  list-style: none; }
 .dropdown-menu 					{  padding: 0; }
 .dropdown-toggle 				{  padding-right: 7px !important; padding-left: 7px !important; }
 .icon-filter, .icon-list 		{  @include opacity(0.4); }
-.btn 							{  background-image: none; background-color: #f9f8f2;  
-	&:hover 					{  background-color: shade(#f9f8f2, 5%) !important; 
+// .btn 							{  background-image: none; background-color: #f9f8f2;  
+// 	&:hover 					{  background-color: shade(#f9f8f2, 5%) !important; 
 
-	}
-	li.active>& 				{  background-color: shade(#f9f8f2, 5%) !important; }
-}
+// 	}
+// 	li.active>& 				{  background-color: shade(#f9f8f2, 5%) !important; }
+// }
 //----------------------Primary Nav---------------------------------//
 .navbar 						{  background: none; background-color: #fdfcf9; }
 .navbar-inner .nav.pull-right	{  padding-right: 40px;  }
