@@ -1,1 +1,19 @@
-<h1>Users#new</h1>
+<div class="row">
+	<div class="span8">
+		<h1>Sign Up for an Account</h1>
+		<div class="form-wrapper">
+			<p>Already have an account? <%= link_to "Sign In", "#" %></p>
+			<%= simple_form_for @user do |f| %>
+			  <%= f.input :first_name %>
+			  <%= f.input :last_name %>
+			  <%= f.input :email %>
+			  <%= f.input :password, hint: 'Must be at least 6 characters in length.' %>
+			  <%= f.input :password_confirmation, hint: 'Once more for verification please.' %>
+			  <%= f.input :accept_terms, :as => :boolean, :label => false, id: "accept_terms"  %> 
+			  <label class="accept-label" for="user_accept_terms"> I have read and I accept the <%= link_to "Terms of Service & Privacy Policy", privacy_policy_path %></label>
+			  <%= render 'shared/error_messages' %>
+			  <%= f.button :submit, id: "create-account", class: 'btn-info pull-right' %>
+			<% end %>
+		</div>
+	</div>
+</div>
