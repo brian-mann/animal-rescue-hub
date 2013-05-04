@@ -12,7 +12,6 @@
 //
 //= require jquery
 //= require jquery.ui.effect-transfer
-//= require js-routes
 
 //= require lib/underscore
 //= require lib/backbone
@@ -21,9 +20,3 @@
 
 //= require twitter/bootstrap/dropdown
 //= require twitter/bootstrap/modal
-
-//= require_tree ./backbone/config
-//= require backbone/app
-//= require_tree ./backbone/entities
-//= require_tree ./backbone/views
-//= require_tree ./backbone/apps

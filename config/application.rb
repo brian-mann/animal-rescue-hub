@@ -65,6 +65,6 @@ module AnimalRescueHub
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
 
-    # config.assets.initialize_on_precompile = false ## fix for heroku precompiling assets with mysql
+    config.assets.initialize_on_precompile = false ## fix for heroku precompiling assets with mysql
   end
 end

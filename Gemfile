@@ -22,7 +22,7 @@ gem "thin"
 gem "rabl"
 # gem "oj"
 gem "gon"
-gem "js-routes"
+# gem "js-routes"
 gem 'jquery-ui-rails', github: "inspectall/jquery-ui-rails"
 gem "rmagick"
 
@@ -38,8 +38,4 @@ end
 group :test do
   gem 'capybara'
   gem 'factory_girl_rails'
-end
-
-group :production do
-  gem 'pg'
 end
