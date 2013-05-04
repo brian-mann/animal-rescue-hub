@@ -5,20 +5,20 @@ AnimalRescueHub::Application.routes.draw do
 
 	resources :animals, :only => [:index, :show]
   resources :users
-  resources :users, :only => [:new, :create, :destroy]
+  resources :sessions, :only => [:new, :create, :destroy]
 
   root :to => 'application#index'
 
   match "/privacy_policy"  => 'pages#privacy_policy'
   match "/signup"          => 'users#new'
-  match '/signin'          => 'sessions#new'
+  get "signin",           to: "sessions#new"
   #the use of via: :delete for the signout route, which indicates that it should be invoked using an HTTP DELETE request
   match '/signout'         => 'sessions#destroy', via: :delete
 
 end
 
 #== Route Map
-# Generated on 03 May 2013 12:54
+# Generated on 03 May 2013 17:15
 #
 # batch_action_admin_admin_users POST       /admin/admin_users/batch_action(.:format) admin/admin_users#batch_action
 #              admin_admin_users GET        /admin/admin_users(.:format)              admin/admin_users#index
@@ -57,9 +57,9 @@ end
 #                           user GET        /users/:id(.:format)                      users#show
 #                                PUT        /users/:id(.:format)                      users#update
 #                                DELETE     /users/:id(.:format)                      users#destroy
-#                                POST       /users(.:format)                          users#create
-#                                GET        /users/new(.:format)                      users#new
-#                                DELETE     /users/:id(.:format)                      users#destroy
+#                       sessions POST       /sessions(.:format)                       sessions#create
+#                    new_session GET        /sessions/new(.:format)                   sessions#new
+#                        session DELETE     /sessions/:id(.:format)                   sessions#destroy
 #                           root            /                                         application#index
 #                 privacy_policy            /privacy_policy(.:format)                 pages#privacy_policy
 #                         signup            /signup(.:format)                         users#new
