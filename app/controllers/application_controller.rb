@@ -10,4 +10,8 @@ class ApplicationController < ActionController::Base
 
 	def index
 	end
+
+	def coming_soon
+		layout false
+	end
 end

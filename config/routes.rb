@@ -1,4 +1,5 @@
 AnimalRescueHub::Application.routes.draw do
+	root :to => "application#coming_soon"
  #  ActiveAdmin.routes(self)
 
  #  devise_for :admin_users, ActiveAdmin::Devise.config
