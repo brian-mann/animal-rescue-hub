@@ -12,6 +12,6 @@ class ApplicationController < ActionController::Base
 	end
 
 	def coming_soon
-		layout false
+		render :layout => false
 	end
 end
