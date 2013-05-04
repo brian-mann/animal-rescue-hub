@@ -26,10 +26,6 @@ gem "js-routes"
 gem 'jquery-ui-rails', github: "inspectall/jquery-ui-rails"
 gem "rmagick"
 
-group :production do
-  gem 'pg'
-end
-
 group :development, :test do
 	gem 'rspec-rails'
 	gem "forgery"
