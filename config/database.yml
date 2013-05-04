@@ -14,11 +14,12 @@ test:
   username: root
   password:
 
-# production:
-#   adapter: mysql2  
-#   encoding: utf8
-#   database: heroku_3592d707c65e01c
-#   username: b21a2c364a3080
-#   password: 7d1be879
-#   host: us-cdbr-east-03.cleardb.com
-#   pool: 5
+production:
+  adapter: mysql2  
+  encoding: utf8
+  database: heroku_ff3dd25dac4640a
+  username: bd3b33b091b4a7
+  password: c6935295
+  host: us-cdbr-east-03.cleardb.com
+  pool: 5
+  
