@@ -3,8 +3,6 @@ class ApplicationController < ActionController::Base
 
 	before_filter :set_gon_vars
 
-	layout "coming_soon"
-	
 	def set_gon_vars
 		gon.environment = Rails.env
 		gon.animal_types = AnimalType.all
@@ -14,5 +12,6 @@ class ApplicationController < ActionController::Base
 	end
 
 	def coming_soon
+		render layout: "coming_soon"
 	end
 end
