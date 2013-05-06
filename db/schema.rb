@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130503151632) do
+ActiveRecord::Schema.define(:version => 20130506144447) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -120,8 +120,10 @@ ActiveRecord::Schema.define(:version => 20130503151632) do
     t.datetime "updated_at",      :null => false
     t.string   "password_digest"
     t.boolean  "accept_terms"
+    t.string   "remember_token"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true
+  add_index "users", ["remember_token"], :name => "index_users_on_remember_token"
 
 end

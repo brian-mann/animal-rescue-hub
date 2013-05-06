@@ -3,6 +3,7 @@ class User < ActiveRecord::Base
   has_secure_password
 
   before_save { |user| user.email = email.downcase }
+  before_save :create_remember_token
 
   validates :email, :first_name, :last_name, :password, :password_confirmation, presence: true
   validates :first_name, :last_name, length: { maximum: 50 }
@@ -15,7 +16,13 @@ class User < ActiveRecord::Base
 		self.first_name.titleize + " " + self.last_name.titleize
 	end
 
+  private
+
+    def create_remember_token
+      self.remember_token = SecureRandom.urlsafe_base64
+    end
 end
+
 
 
 # == Schema Information
@@ -30,5 +37,6 @@ end
 #  updated_at      :datetime        not null
 #  password_digest :string(255)
 #  accept_terms    :boolean(1)
+#  remember_token  :string(255)
 #
 

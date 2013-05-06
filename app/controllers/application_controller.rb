@@ -1,5 +1,6 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
+  include SessionsHelper
 
 	before_filter :set_gon_vars
 	
@@ -9,5 +10,11 @@ class ApplicationController < ActionController::Base
 	end
 
 	def index
+	end
+
+	# Force signout to prevent CSRF attacks
+	def handle_unverified_request
+		sign_out
+		super
 	end
 end

@@ -12,10 +12,11 @@ describe User do
 	it { should respond_to(:password_digest) }
 	it { should respond_to(:password) }
 	it { should respond_to(:password_confirmation) }
+	it { should respond_to(:remember_token) }
 	it { should respond_to(:authenticate) }
 	it { should respond_to(:accept_terms) }
 
-	# Verifying that the entire User model is valid----------------------------------------------------------
+	# Verifying that the entire User model is valid---------------------------------------------------------
 	it { should be_valid }
 
 	# First sets attr to be invalid (black) valie, then tests to see that resulting object is invalid--------
@@ -105,6 +106,12 @@ describe User do
 		it 			{ should_not be_valid }
 	end
 
+	# Test for valid (nonblank) remember token-----------------------------------------------------------------------------
+	describe "remember token" do
+		before 								{ @user.save }
+		its(:remember_token) 	{ should_not be_blank }
+	end
+
 	# Authenticate user tests-----------------------------------------------------------------------------
 	describe "return value of authenticate method" do
 		before 						{ @user.save }
@@ -125,6 +132,7 @@ describe User do
 end
 
 
+
 # == Schema Information
 #
 # Table name: users
@@ -136,5 +144,7 @@ end
 #  created_at      :datetime        not null
 #  updated_at      :datetime        not null
 #  password_digest :string(255)
+#  accept_terms    :boolean(1)
+#  remember_token  :string(255)
 #
 
