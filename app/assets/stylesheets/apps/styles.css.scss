@@ -63,7 +63,7 @@ li 								{  list-style: none; }
 	}
 }
 //-----------------------Browse Page-------------------------------//
-#main-region 					{  margin-top: 70px; }
+.container	 					{  margin-top: 70px; }
 .layout-wrapper 				{  padding-left: 30px; padding-right: 20px; }
 .item 							{  overflow: auto; }
 .animal 						{  cursor: pointer; @include box-shadow(rgba(black, .1) 0 0px 1px); overflow: visible; width: 200px; margin: 10px; padding: 0 10px 20px; background-color: #fff; border: 1px solid #eae8d7; 
