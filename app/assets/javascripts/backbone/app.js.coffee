@@ -18,11 +18,11 @@
 	App.rootRoute = Routes.animals_path()	
 	
 	App.addRegions
-		headerRegion: "#header-region"
+		# headerRegion: "#header-region"
 		mainRegion: 	"#main-region"
 	
-	App.addInitializer ->
-		App.module("HeaderApp").start favoriteAnimals: @favoriteAnimals
+	# App.addInitializer ->
+	# 	App.module("HeaderApp").start favoriteAnimals: @favoriteAnimals
 	
 	App.on "initialize:after", (options) ->
 		@startHistory()
