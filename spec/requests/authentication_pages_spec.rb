@@ -55,6 +55,22 @@ describe "AuthenticationPages" do
           before { put user_path(user) }
           specify { response.should redirect_to(signin_path) }
         end
+
+        describe "when attemptin to visit a protected page" do
+          before do
+            visit edit_user_path(user)
+            fill_in "Email",    with: user.email
+            fill_in "Password", with: user.password
+            click_button "Sign In"
+          end
+
+          describe "after signing in" do
+
+            it "should render the desired protected page" do
+              page.should have_selector('title', text: "Update Profile")
+            end
+          end
+        end
       end
     end
 
