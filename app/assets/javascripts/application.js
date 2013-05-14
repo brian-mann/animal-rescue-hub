@@ -13,6 +13,7 @@
 //= require jquery
 //= require jquery.ui.effect-transfer
 //= require js-routes
+//= require jquery_ujs
 
 //= require lib/underscore
 //= require lib/backbone
