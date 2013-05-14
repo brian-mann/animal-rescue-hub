@@ -28,11 +28,11 @@ describe "AuthenticationPages" do
 
       it { should have_selector('title', text: user.full_name) }
       it { should have_link('Profile', href: user_path(user)) }
-      it { should have_link('Sign Out', href: signout_path) }
+      it { should have_button('sign_out') }
       it { should_not have_link('Sign In', href: signin_path) }
 
       describe "followed by signout" do
-        before  { click_link('Sign Out') }
+        before  { click_button('sign_out') }
         it      { should have_link('Sign In', href: signin_path) }
       end
 
@@ -48,7 +48,7 @@ describe "AuthenticationPages" do
 
         describe "visiting the edit page" do
           before { visit edit_user_path(user) }
-          it { should have_selector('title', text: 'Sign in') }
+          it { should have_selector('title', text: 'Sign In') }
         end
 
         describe "submitting to the update action" do
@@ -56,7 +56,7 @@ describe "AuthenticationPages" do
           specify { response.should redirect_to(signin_path) }
         end
 
-        describe "when attemptin to visit a protected page" do
+        describe "when attempting to visit a protected page" do
           before do
             visit edit_user_path(user)
             fill_in "Email",    with: user.email
@@ -67,7 +67,7 @@ describe "AuthenticationPages" do
           describe "after signing in" do
 
             it "should render the desired protected page" do
-              page.should have_selector('title', text: "Update Profile")
+              page.should have_selector('title', text: "Edit Profile")
             end
           end
         end
@@ -81,7 +81,7 @@ describe "AuthenticationPages" do
 
       describe "visiting Users#edit page" do
         before { visit edit_user_path(wrong_user) }
-        it { should_not have_selector('title', text: full_title('Edit Profile')) }
+        it { should_not have_selector('title', text: 'Edit Profile') }
       end
 
       describe "submitting a PUT request to the Users#update action" do
