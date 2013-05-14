@@ -10,21 +10,7 @@
 	</thead>
 	<tbody>
 		<% @users.each do |user| %>
-			<tr>
-				<td>
-					<div>
-						<%= user.full_name %>
-					</div>
-				</td>
-				<td>
-					<div><%= user.email %></div>
-				</td>
-				<td>
-					<div>
-						<%= link_to user.full_name, user %>
-					</div>
-				</td>
-			</tr>
+			<%= render user %>
 		<% end %>
 	</tbody>
 </table>
