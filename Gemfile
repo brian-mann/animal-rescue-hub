@@ -11,6 +11,9 @@ group :assets do
   gem "bootstrap-sass-rails"
   gem 'bcrypt-ruby'
   gem 'simple_form'
+  gem 'faker'
+  gem 'will_paginate'
+  gem 'bootstrap-will_paginate'
 end
 
 gem 'jquery-rails'
