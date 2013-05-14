@@ -1,0 +1,16 @@
+<div class="row">
+	<div class="span8">
+		<h1>Edit Profile</h1>
+		<div class="form-wrapper">
+			<%= simple_form_for @user do |f| %>
+			  <%= f.input :first_name %>
+			  <%= f.input :last_name %>
+			  <%= f.input :email %>
+			  <%= f.input :password, hint: 'Must be at least 6 characters in length.' %>
+			  <%= f.input :password_confirmation, hint: 'Once more for verification please.' %>
+			  <%= render 'shared/error_messages' %>
+			  <%= f.button :submit, id: "update-account", value: "Save Changes", class: 'btn-info pull-right' %>
+			<% end %>
+		</div>
+	</div>
+</div>

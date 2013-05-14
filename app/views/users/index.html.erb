@@ -1,0 +1,17 @@
+<h1>All Users</h1>
+<%= will_paginate @users %>
+<table class="table table-condensed table-bordered">
+	<thead>
+		<tr>
+			<th>Name</th>
+			<th>Email</th>
+			<th>Profile</th>
+		</tr>
+	</thead>
+	<tbody>
+		<% @users.each do |user| %>
+			<%= render user %>
+		<% end %>
+	</tbody>
+</table>
+<%= will_paginate @users %>

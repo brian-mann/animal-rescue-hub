@@ -1,58 +1,26 @@
 require 'spec_helper'
 
 describe User do
-  
+
 	before { @user = User.new(first_name: "Example", last_name: "User", email: "user@example.com", password: "foobar", password_confirmation: "foobar", accept_terms: true) }
 
 	subject { @user }
 
-	it { should respond_to(:first_name) }
-	it { should respond_to(:last_name) }
-	it { should respond_to(:email) }
-	it { should respond_to(:password_digest) }
-	it { should respond_to(:password) }
-	it { should respond_to(:password_confirmation) }
-	it { should respond_to(:remember_token) }
-	it { should respond_to(:authenticate) }
-	it { should respond_to(:accept_terms) }
-
 	# Verifying that the entire User model is valid---------------------------------------------------------
 	it { should be_valid }
+	it { should_not be_admin }
 
-	# First sets attr to be invalid (black) valie, then tests to see that resulting object is invalid--------
-	describe "when First Name is not present" do
-		before  { @user.first_name = " " }
-		it 			{ should_not be_valid }
-	end
+	describe "with admin attribute set to 'true'" do
+	  before do
+	    @user.save!
+	    @user.toggle!(:admin)
+	  end
 
-	describe "when Last Name is not present" do
-		before  { @user.last_name = " " }
-		it 			{ should_not be_valid }
-	end
-
-	describe "when Email is not present" do
-		before  { @user.email = " " }
-		it 			{ should_not be_valid }
-	end
-
-	describe "when Password is not present" do
-		before 	{ @user.password = @user.password_confirmation = " " }
-		it 			{ should_not be_valid }
+	  it { should be_admin }
 	end
 
 	describe "when Accepts Terms is not true" do
 		before 	{ @user.accept_terms = false }
-		it 			{ should_not be_valid }
-	end
-
-	# Test for length validation-----------------------------------------------------------------------------
-	describe "when First Name is too long" do
-		before 	{ @user.first_name = "a" * 51 }
-		it 			{ should_not be_valid }
-	end
-
-	describe "when Last Name is too long" do
-		before 	{ @user.last_name = "z" * 51 }
 		it 			{ should_not be_valid }
 	end
 
@@ -92,12 +60,6 @@ describe User do
 	describe "when Password doesn't match Password Confirmation" do
 		before 	{ @user.password_confirmation = "mismatch" }
 		it 			{ should_not be_valid }
-	end
-
-	# Test for min length validation of password-----------------------------------------------------------------------------
-	describe "with a password that's too short" do
-		before 	{ @user.password = @user.password_confirmation = "a" * 5 }
-		it 			{ should be_invalid }
 	end
 
 	# Test to not allow for nil password_confirmation to be set-----------------------------------------------------------------------------

@@ -18,7 +18,7 @@ AnimalRescueHub::Application.routes.draw do
 end
 
 #== Route Map
-# Generated on 03 May 2013 17:15
+# Generated on 06 May 2013 14:58
 #
 # batch_action_admin_admin_users POST       /admin/admin_users/batch_action(.:format) admin/admin_users#batch_action
 #              admin_admin_users GET        /admin/admin_users(.:format)              admin/admin_users#index
@@ -63,5 +63,5 @@ end
 #                           root            /                                         application#index
 #                 privacy_policy            /privacy_policy(.:format)                 pages#privacy_policy
 #                         signup            /signup(.:format)                         users#new
-#                         signin            /signin(.:format)                         sessions#new
+#                         signin GET        /signin(.:format)                         sessions#new
 #                        signout DELETE     /signout(.:format)                        sessions#destroy

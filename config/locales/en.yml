@@ -17,3 +17,4 @@ en:
     submit:
       user:
         create: "Create Account"
+        edit: "Save Changes"
