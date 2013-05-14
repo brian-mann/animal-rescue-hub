@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-	before_filter :require_admin_user, 			only: [:index]
+	before_filter :require_admin_user, 			only: [:index, :destroy]
 	before_filter :signed_in_user, 					only: [:edit, :update]
 	before_filter :correct_user,   					only: [:edit, :update]
 
@@ -41,6 +41,12 @@ class UsersController < ApplicationController
 		else
 			render 'edit'
 		end
+	end
+
+	def destroy
+		User.find(params[:id]).destroy
+		flash[:success] = "User was successfully deleted."
+		redirect_to users_url
 	end
 
 	private
