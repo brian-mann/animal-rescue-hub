@@ -15,8 +15,6 @@ describe "User pages" do
 
 		before { visit signup_path }
 
-		it          { should have_selector('title',  text: "Sign Up") }
-
 		let(:submit) { "create-account" }
 
 		describe "with invalid information" do
