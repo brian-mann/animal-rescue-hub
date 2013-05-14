@@ -1,21 +1,9 @@
-class Animal < ActiveRecord::Base
-	attr_accessible :age, :donation_id, :gender, :goal_amount, :goal_date, :name, :need_level_id, :nonprofit_id, :story, :animal_type_id, :avatar, :city, :state_id, :zip, :progress, :goal_progress
+require 'spec_helper'
 
-	default_scope order: 'animals.created_at DESC'
+describe Animal do
 
-	scope :with_index, includes(:animal_type)
-
-	belongs_to 	:user
-	belongs_to 	:animal_type
-	belongs_to 	:nonprofit
-	belongs_to 	:state
-	has_many 		:donors, :through => :donations
-
-  validates_presence_of 	:user_id, :nonprofit_id, :name
 
 end
-
-
 # == Schema Information
 #
 # Table name: animals

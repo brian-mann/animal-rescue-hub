@@ -95,6 +95,7 @@ end
 
 
 
+
 # == Schema Information
 #
 # Table name: users
@@ -108,5 +109,6 @@ end
 #  password_digest :string(255)
 #  accept_terms    :boolean(1)
 #  remember_token  :string(255)
+#  admin           :boolean(1)      default(FALSE)
 #
 

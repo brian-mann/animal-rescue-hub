@@ -2,6 +2,8 @@ class User < ActiveRecord::Base
   attr_accessible :email, :first_name, :last_name, :password, :password_confirmation, :accept_terms
   has_secure_password
 
+  has_many  :animals
+
   before_save { |user| user.email = email.downcase }
   before_save :create_remember_token
 
@@ -25,6 +27,7 @@ end
 
 
 
+
 # == Schema Information
 #
 # Table name: users
@@ -38,5 +41,6 @@ end
 #  password_digest :string(255)
 #  accept_terms    :boolean(1)
 #  remember_token  :string(255)
+#  admin           :boolean(1)      default(FALSE)
 #
 

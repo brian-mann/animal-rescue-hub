@@ -1,6 +1,10 @@
 class Nonprofit < ActiveRecord::Base
-  attr_accessible :name
+  attr_accessible :name, :avatar, :bio, :date_est, :address, :city, :state, :zip
+
+  has_many 		:users
+  has_many 		:animals
 end
+
 
 # == Schema Information
 #
@@ -15,5 +19,7 @@ end
 #  ein        :string(255)
 #  created_at :datetime        not null
 #  updated_at :datetime        not null
+#  avatar     :string(255)
+#  bio        :text
+#  date_est   :date
 #
-
